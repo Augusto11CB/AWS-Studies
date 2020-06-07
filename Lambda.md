@@ -24,6 +24,7 @@ A Lambda Authorizer (formerly known as a custom authorizer) placed on an API Gat
 * [Enriching Requests With AWS Lambda Authorizer](https://www.theguild.nl/enriching-requests-with-an-aws-lambda-authorizer/)(Java)
 * [Configure a Lambda authorizer using the API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/configure-api-gateway-lambda-authorization-with-console.html)
 
+## [AWSLabs - aws-serverless-java-container](https://github.com/awslabs/aws-serverless-java-container)
 
 ## AWS Lambda + Spring Boot
 [AWS Lambda and Java Spring Boot: Getting Started](https://epsagon.com/blog/aws-lambda-and-java-spring-boot-getting-started/)
