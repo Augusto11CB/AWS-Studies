@@ -215,4 +215,46 @@ The Reliability pillar has some overlap with Performance Efficiency, but the max
 ```
 ## Domain #2 - Security and Compliance
 
+### AWS Shared Responsibility Model
+- “Security of the Cloud”: **Responsible for protecting the infrastructure** that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services.
 
+### Customer Responsibility
+- "Security in the Cloud”: Responsibility will be determined by the AWS Cloud services that a customer selects. This determines the amount of configuration work the customer must perform as part of their security responsibilities.
+
+#### Specific Controls
+Controls which are solely the responsibility of the customer based on the application they are deploying within AWS services.
+
+- Region Choices
+- Service/feature Choices
+
+### Shared Responsibility Big Picture
+![](2022-08-04-09-30-16.png)
+
+
+```
+Which of the following responsibilities would the customer manage directly, according to the AWS shared responsibility model? (pick two)
+
+A. Applying security patches to the hypervisor for virtual machines
+B. Enforcing DDoS protection for service API endpoints
+C. User account management on virtual machine guest operating systems
+D. Selecting the encryption key to use for protecting data at-rest
+E. In-transit encryption of cross-region network traffic
+```
+
+
+```
+Answer: C and D
+
+All guest OS operations are the responsibility of the customer, as is the choice of encryption keys for any at- rest encryption
+```
+
+### Service Compliance Considerations
+- Service availability doesn't imply all features are available in the region
+- Check for service compliance by program (PCI, SOC, GDPR, etc.)
+- Service compliance doesn't imply all features are compliant
+
+
+### At-rest Encryption
+Encryption at rest is when data at rest is given layers of encryption for security. 
+
+### In-Transit Encryption On AWS
