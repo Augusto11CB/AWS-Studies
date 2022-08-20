@@ -21,3 +21,5 @@ An instance of a Task Definition, running the containers detailed within it. Mul
 ![image](https://user-images.githubusercontent.com/17462762/185269682-b755d7d4-0e07-4998-b29e-73e9d3e0bed5.png)
 ![image](https://cdn-media-1.freecodecamp.org/images/eL718lUcFCktxO96DKpdAIu1uBguoNqOKHRF)
 ![image](https://cdn-media-1.freecodecamp.org/images/Ff1BK5c7YRL7KAv71Hu7ZSwByYpeJPTaolzT)
+
+[FONTE](https://www.freecodecamp.org/news/amazon-ecs-terms-and-architecture-807d8c4960fd/
