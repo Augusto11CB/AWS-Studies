@@ -102,6 +102,7 @@ Platform as a Service (PaaS) is cloud service category where platform services a
 
 AWS Service:
     - Elastic Beanstalk
+    - SageMaker
 
 The capability provided to the customer is to **deploy** onto the cloud infrastructure **consumer-created or acquired applications** created using programming languages, libraries, services, and tools supported by the provider
     - Customer has no cotnrol over the underlying cloud infra such as network, servers, O.S, and storage
@@ -204,3 +205,30 @@ In a cloud environment with metered pricing, costs are realized as resources are
 - Portability: It is the key feature that allows systems to easily and seamlessly move between different cloud providers
 - Service Level Agreements (**SLA**): It spells out in clear terms the minimum requirements for uptime, availability, processes, customer service and support, security controls and requirements, auditing, reporting, etc
 - Governance: Governance at its core involves assigning jobs, tasks, roles, and responsibilities and ensuring they are satisfactorily performed 
+
+## 3. Security and Complience
+In this chapter the following topics are discussed:
+- Define the AWS Shared Responsibility Model
+- Define AWS Cloud security and compliance concepts
+- Identify AWS access management capabilities
+- Identity resources for security support
+
+### AWS Shared Responsibility Model
+Cloud provider responsabilities:
+- facilities
+- redundancy
+- physical security
+- network cabling
+- hardware components
+- availability zones, edge locations
+
+Beyond the layers of physical facilities and computing hardware, there are differing levels of responsibility based upon the cloud services model employed.
+![](responsability-cloud-provider-cloud-customer-diagram.png)
+
+The image above shows the areas of responsibility within a cloud implementation. The shaded areas represent the responsibility on the part of the cloud provider.
+
+#### Manage Resources vs. Unmanaged
+1. Managed resources are those where the cloud provider is responsible for the installation, patching, maintenance, and security of a resource.
+2. Unmanaged resources are those hosted within a cloud environment, but where the customer bears responsibility for host functions. 
+## AWS Core Services Overview
+![](aws-core-services-overview.png)
