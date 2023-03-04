@@ -157,9 +157,50 @@ NIST SP 800-145 definition:
 > The cloud infrastructure is a composition of two or more distinct cloud infrastructures (private, community, or public) that remain unique entities, but are bound together by standardized or proprietary technology that enables data and application portability (e.g., cloud busting for load balancing between clouds).
 
 ### The Cost-Benefit Analysis of the different kinds of "Clouds"
-#### Resource Pooling and Cyclical Demands
-#### Data Center Costs vs. Operational Expense Costs
-#### Focus Change
-#### Ownership and Control
-#### Cost Structure
 
+#### Resource Pooling and Cyclical Demands
+With a traditional data center, an organization has to maintain sufficient resources to handle their highest load peaks, which demands much larger up-front hardware and ongoing support costs. However, organizations might have a cyclical nature to their system demands.
+
+In the case mentioned above, a transition to the cloud would be a benefit, since the up-front cost would be far lower without having to build up a massive infrastructure from the outset.
+
+In cases where a company has a steady load throughout the year and cyclical peak of demands are not a concern for the company, then a move to a cloud environment may not yield the same level of benefits.
+
+#### Data Center Costs vs. Operational Expense Costs
+With facilities, utilities systems staff, networking, storage, and all the components needed to run data center operations being the responsibility of the cloud provider, the focus is then shifted to management and oversight, as well as requirements for building and auditing. 
+
+It is important for any organization thinking about moving to a cloud environment to fully assess the staff and talents they already have and whether they can adapt to the new demands and changing roles in a cloud environment.
+
+#### Focus Change
+Companies have operations and development staff. By moving to a cloud environment, the operations side will fundamentally change running systems to overseeing them.
+
+A rush to a cloud environment could disrupt productivity; cause internal fighting; or even result in a significant loss of staff. However, a move to a cloud carries enormous benefits such as: 
+- Developers can very easily take on new projects and try out new innovations with the ability to rapidly allocate resources
+- change in culture as well
+- ability to quickly start projects without the traditional wait times and costs for hardware procurement and configuration
+
+#### Ownership and Control
+When an organization owns their data centers and all the hardware, they get to set all the rules and have full control over everything.
+
+In a cloud environment, the organization gives up direct control over operational procedures, system management, and maintenance, as well as upgrade plans and environment changes.
+
+Major cloud providers such as AWS have enabled a heightened sense of ownership with the flexibility they offer for configurations and the broad range of options for resources. 
+#### Cost Structure
+**Costs are very predictable in a traditional data center**. An organization can appropriate funds for capital expenditures for hardware and infrastructure and then allocate appropriate staffing and resources to maintain the hardware and infrastructure over time.
+
+In a cloud environment with metered pricing, costs are realized as resources are added and changed over time.  This can cause an unpredictable schedule of costs.
+
+### Universal Cloud Concepts
+- Interoperability: It is the ease with which one can move or reuse components of an application or service
+- Elasticity and Scalability
+    - They are similar concepts in terms of the **changing of resources allocated** to a system or application to meet current demands
+    - **The difference between them relates to the manner in which the level of resources is altered**
+    - Scalability the allocated resources are changed statistically to meet anticipated demands or new deployments in services
+    - Elasticity adds the ability for the dynamic modification of resources to meet demands as they evolve (customer can set thresholds for when a cloud environment will automatically add or remove resources)
+- Performance
+- Availability and Resiliency
+    - To remember the **difference** between availability and resiliency **is the extent to which a system is affected by outages** 
+    - Availability pertains to the overall status if a system is up or down.
+    - Resiliency pertains to the ability of a system to continue to function when some aspect or portions of it experience an outage
+- Portability: It is the key feature that allows systems to easily and seamlessly move between different cloud providers
+- Service Level Agreements (**SLA**): It spells out in clear terms the minimum requirements for uptime, availability, processes, customer service and support, security controls and requirements, auditing, reporting, etc
+- Governance: Governance at its core involves assigning jobs, tasks, roles, and responsibilities and ensuring they are satisfactorily performed 
