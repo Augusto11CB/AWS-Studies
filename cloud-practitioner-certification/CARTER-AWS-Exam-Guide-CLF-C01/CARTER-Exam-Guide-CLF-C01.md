@@ -230,5 +230,105 @@ The image above shows the areas of responsibility within a cloud implementation.
 #### Manage Resources vs. Unmanaged
 1. Managed resources are those where the cloud provider is responsible for the installation, patching, maintenance, and security of a resource.
 2. Unmanaged resources are those hosted within a cloud environment, but where the customer bears responsibility for host functions. 
+
+### Data Security Strategies
+Several toolsets and technologies are commonly used as data security strategies:
+- Encryption
+- Hashing
+- Key management
+- Masking
+- Obfuscation
+- Anonymization
+- Tokenization
+
+### Encryption
+The architecture of an encryption system has three basic components: 
+- the data itself, 
+- the encryption engine that handles all the encryption activities, 
+- the encryption keys used in the actual encryption and use of the data.
+
+Encryption aspects to consider:
+- the storage of data on a system: 
+    - when it is being accessed 
+    - when it is at rest
+- transmission of data and transactions between systems. 
+
+**Any use of encryption will cause higher load and processing times, so proper scaling and evaluation of systems are critical when testing deployments and design criteria.**
+
+
+In a cloud environment, ensuring the encryption and security of data-at-rest is crucial because virtual machines are widely used. Unlike in a conventional data center where systems can be powered off and unreachable, in a virtual environment, the underlying image remains in storage even when a system is not powered on or started. This creates a risk of compromise or corruption, particularly if developers have stored application or customer data on the VM image.
+
+As a last major concern, encryption does not ensure data integrity, only confidentiality within an environment.
+
+#### Data in transit (transmission of data)
+The most common method for data-in-transit encryption is to use the well-known SSL and TLS technologies under HTTPS. Beyond using HTTPS, other common encryption methods for data in transit are VPNs (virtual private networks) and IPsec. These methods can be used by themselves but are most commonly used in parallel to provide the highest level of protection possible.
+
+#### Data at rest
+Data at rest refers to information stored on a system or device (versus data that is actively being transmitted across a network or between systems). Some examples include **databases**, file sets, spreadsheets, documents, tapes, archives, and even mobile devices.
+
+#### Challenges with Encryption
+A central challenge to encryption implementations is the dependence on key sets to handle the actual encryption and decryption processes. Without the proper security of encryption keys, or exposure to external parties such as the cloud provider itself, the entire encryption scheme could be rendered vulnerable and insecure.
+
+#### Encryption Implementations
+##### Database storage systems
+With databases two layers of encryption are typically applied. First, database systems will reside on volume storage systems. The database files can be protected through encryption methods at the volume storage system level.
+
+The second layers is within the database system itself are encryption methods that can be applied to the data set, either wholesale or on a granular level, by encrypting specific tables or columns of data.
+
+### Hashing
+Hashing is a process of converting data of any size into a fixed-size output, known as a hash value, hash code, or message digest. This output is typically a unique representation of the original input data and is generated using a hash function.
+
+A hash function takes the input data and performs a set of mathematical operations on it to create a hash value that is usually a fixed size, regardless of the size of the input data. The hash value is generally used as a digital fingerprint of the original input data and is used for several purposes, including **verifying the integrity of data, storing passwords securely, and detecting duplicates**. This process is widely referred to by common terms such as checksums, digests, or fingerprints.
+
+**Hashing is a one-way function, which means that it is not possible to recreate the original input data from the hash value.**
+
+### Key Management
+Key management is a critical task that involves protecting encryption keys and controlling access to them. 
+
+With regard to the storage of encryption keys, in a traditional data center configuration, the key management system will typically be on dedicated hardware and systems, segregated from the rest of the environment. Within a cloud environment, due to multitenancy, protection of the virtual machine hosting the key management system is vital.
+
+Key storage can be implemented in a cloud environment in three ways:
+1. Internal storage: the keys are stored and accessed within the same virtual machine as the encryption service or engine—it keeps the entire process together, and it is appropriate for some storage types such as database and backup system encryption. 
+2. External storage, the keys are maintained separately from the systems and security processes (such as encryption).
+3. External and independent service or system host the key storage. 
+
+### Tokenization
+Tokenization is the practice of utilizing a random and opaque “token” value in data to replace what otherwise would be a sensitive or protected data object. The token value is usually generated by the application with a means to map it back to the actual real value.
+
+Tokens are not mathematically related to the original data, which makes them more secure against attacks such as brute-force decryption or dictionary attacks. It's worth noting that tokens can still be vulnerable to attacks such as **token guessing**, where an attacker tries to guess valid tokens in order to access sensitive data. 
+
+The relationship between the token and the original data that is maintained through the use of a tokenization system. The **tokenization system generates a unique token** for each piece of sensitive data that needs to be tokenized, **and the token is then stored in a database alongside the original data**.
+
+### Data Loss Prevention (DLP)
+DLP is a set of controls and practices put in place to ensure that data is only accessible and exposed to those users and systems authorized to have it.
+
+DLP implementation is composed of three common components:
+
+1. **discovery and classification stage**: The focus is on identifying data that is relevant to the DLP strategy, and once the data has been found, it is necessary to determine its security classification and requirements.
+
+2. **monitoring**:  It involves the actual process of watching data as it moves through the various states of usage to ensure it is being used in appropriate and controlled ways. It also ensures that those who access and use the data are authorized to do so and are using it in an appropriate manner.
+
+3. **enforcement DLP policies**: Upon detecting potential violations, the DLP implementation can automatically take a range of measures based on the policies established by management. These measures can include logging and alerting of the violation or actively blocking and preventing it at the point of detection.
+
+#### Cloud environment vs DLP - Challenges
+The cloud environment brings additional challenges to DLP. First, data in a cloud is spread across large storage systems, with varying degrees of replication and redundancy, and oftentimes where the data will be stored and accessed is unpredictable. For a DLP strategy, this can pose a particular challenge because it makes properly discovering and monitoring all data used by a system or application more difficult, because the data can change locations over time.
+
+### Data De-identification
+Data de-identification involves using **masking**, **obfuscation**, or **anonymization**.
+
+Masking: This strategy involves replacing sensitive data with fictitious data that has the same format as the original data. Masking is often used to protect data during development or testing, and can help ensure that sensitive data is not exposed during these processes.
+
+Obfuscation: This strategy involves intentionally making the data difficult to understand or read, while still maintaining its functionality. Obfuscation is often used in software development to protect intellectual property and prevent reverse engineering.
+
+Anonymization: This strategy involves removing or altering personal identifying information from the data to protect the privacy of individuals. Anonymization is often used in data analysis and research to protect the identities of individuals while still allowing for meaningful analysis of the data.
+
+### AWS Identity and Access Management
+#### IAM User Groups and Roles
+- Groups are used to assign a standard set of permissions to users as they are added to the system.
+- Roles in AWS are the granular permissions that users can be granted. Within each AWS service, there are multiple roles that allow different activities, such as reading data, creating data, deploying services, provisioning access, etc.
+
+#### Federated Access
+With federated access, you can use technologies such as SAML or Microsoft Active Directory to provision users, rather than creating them manually through the IAM account process in the Console. The big advantage with using federated access is that users will use accounts and credentials they already have established to access AWS.
+
 ## AWS Core Services Overview
 ![](aws-core-services-overview.png)
