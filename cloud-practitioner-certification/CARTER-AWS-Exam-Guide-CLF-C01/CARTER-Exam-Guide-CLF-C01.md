@@ -227,6 +227,13 @@ Beyond the layers of physical facilities and computing hardware, there are diffe
 
 The image above shows the areas of responsibility within a cloud implementation. The shaded areas represent the responsibility on the part of the cloud provider.
 
+> 7.  Which area of responsibility lies with the customer in a PaaS implementation?
+> A.   Application code
+> B.   Security
+> C.   Operating system
+> D.   Storage
+> **[A]. The application code is the responsibility of the customer within a PaaS service model.**
+
 #### Manage Resources vs. Unmanaged
 1. Managed resources are those where the cloud provider is responsible for the installation, patching, maintenance, and security of a resource.
 2. Unmanaged resources are those hosted within a cloud environment, but where the customer bears responsibility for host functions. 
@@ -324,11 +331,40 @@ Anonymization: This strategy involves removing or altering personal identifying 
 
 ### AWS Identity and Access Management
 #### IAM User Groups and Roles
-- Groups are used to assign a standard set of permissions to users as they are added to the system.
-- Roles in AWS are the granular permissions that users can be granted. Within each AWS service, there are multiple roles that allow different activities, such as reading data, creating data, deploying services, provisioning access, etc.
+- **Groups** are used to assign a standard set of permissions to users as they are added to the system.
+- **Roles** in AWS are the granular permissions that users can be granted. Within each AWS service, there are multiple roles that allow different activities, such as reading data, creating data, deploying services, provisioning access, etc.
 
 #### Federated Access
 With federated access, you can use technologies such as SAML or Microsoft Active Directory to provision users, rather than creating them manually through the IAM account process in the Console. The big advantage with using federated access is that users will use accounts and credentials they already have established to access AWS.
 
+## 4. Technology
+In this chapter the following topics are discussed:
+- Define methods of deploying and operating in the AWS Cloud
+- Define the AWS global infrastructure
+- Identify the core AWS services
+- Identity resources for technology support
+
+### AWS Developer Tools and SDKs
+https://aws.amazon.com/developer/tools/
+
+#### CodeBuild
+This AWS's service compile, test code and build deployment packages.
+
+#### CodeCommit
+AWS managed service for secure Git repositories.
+
+#### CodeDeploy
+AWS CodeDeploy is a managed deployment service that can deploy code fully across AWS services or on-premises servers. 
+
+### System Manager
+#### OpsCenter
+Provides a consolidated view  to investigate any operational issue. The Opscenter centralize data from CloudTrail logs, CloudWatch alarms, metrics, information about AWS configuration changes.
+
+#### Explorer
+A customizable dashboard that provides information on the health of your entire AWS environment and can consolidate data spanning multiple accounts and regions.
+
 ## AWS Core Services Overview
 ![](aws-core-services-overview.png)
+
+### AWS Trusted Advisor
+The AWS Trusted Advisor provides a dashboard to check whether your account configurations comply with established best practices.
