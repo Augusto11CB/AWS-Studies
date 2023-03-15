@@ -89,13 +89,13 @@ The capability provided to the consumer is to **provision processing, storage, n
     - Customer has control over the O.S, storage and deployed applications
 
 Benefits:
-    - Scalability
-    - Cost of ownership of physical hardware:  Within IaaS, the customer does not need to procure any hardware
-    - High availability
-    - Physical and logical security requirements: the cloud provider assumes the cost and oversight of the physical security of its data centers. Data is also protected by layers of logical network security and user access security
-    - Location and access independence
-    - Metered usage
-    - Choice of hardware
+- Scalability
+- Cost of ownership of physical hardware:  Within IaaS, the customer does not need to procure any hardware
+- High availability
+- Physical and logical security requirements: the cloud provider assumes the cost and oversight of the physical security of its data centers. Data is also protected by layers of logical network security and user access security
+- Location and access independence
+- Metered usage
+- Choice of hardware
 
 #### PaaS
 Platform as a Service (PaaS) is cloud service category where platform services are provided to the cloud customer, and the cloud provider is responsible for the system up to the level of the actual application (ISO/IEC 17788).
@@ -105,7 +105,7 @@ AWS Service:
     - SageMaker
 
 The capability provided to the customer is to **deploy** onto the cloud infrastructure **consumer-created or acquired applications** created using programming languages, libraries, services, and tools supported by the provider
-    - Customer has no cotnrol over the underlying cloud infra such as network, servers, O.S, and storage
+    - Customer has no control over the underlying cloud infra such as network, servers, O.S and storage
     - Customer has control over the deployed applications and configuration settings for the application-hosting environment.
 
 Benefits:
@@ -117,6 +117,46 @@ Benefits:
    - Cost-effective: only systems that are actively and currently used incur costs
    - Ease Access
    - Licensing: Cloud provider is responsible for handling proper licensing of operating systems and platforms,
+
+
+```
+The underlying infrastructure refers to the hardware and software components that support a cloud computing service. This includes the physical servers, storage devices, networking equipment, and virtualization software that work together to create the cloud environment. In the case of PaaS and IaaS, the underlying infrastructure differs in terms of the level of abstraction that is provided to the user. With IaaS, the user has more control over the infrastructure and is responsible for managing the operating system, middleware, and applications, while with PaaS, the cloud provider manages much of the infrastructure, allowing the user to focus more on developing and deploying applications.
+```
+
+```
+Which "underlying infrastructure" in IaaS is the user responsible for, and which infrastructure is the cloud provider responsible for?
+
+In an IaaS model, the cloud provider is responsible for the underlying physical infrastructure, including servers, storage, networking, and data center facilities. On the other hand, the user is responsible for managing the operating system, applications, data, and security configurations of the virtual machines or servers provisioned on top of the infrastructure. This means that the cloud provider ensures the availability and scalability of the infrastructure, while the user is responsible for the proper management and security of their applications and data within that infrastructure.
+```
+
+```
+An application deployed in a PaaS environment can access a database. In a PaaS environment, the cloud provider is responsible for managing the underlying infrastructure and the database, including its configuration, scaling, and maintenance. **However, the user is responsible for managing the data stored in the database**, such as data security and compliance. The user typically interacts with the database through a web-based console or command-line interface provided by the PaaS environment.
+```
+
+```
+Can an application deployed in a PaaS environment access a database? Who is responsible for controlling the database in a PaaS environment?
+
+Yes, an application deployed in a PaaS environment can access a database. In a PaaS environment, the cloud provider is responsible for managing the underlying infrastructure and the database, including its configuration, scaling, and maintenance. However, the user is responsible for managing the data stored in the database, such as data security and compliance. The user typically interacts with the database through a web-based console or command-line interface provided by the PaaS environment.
+```
+
+```
+How does a database work in an IaaS environment? Is it the user's responsibility to create the database or is it the responsibility of the cloud provider?
+
+ In an IaaS environment, the user is responsible for creating and managing the database, including installing the database software and configuring it to work with their virtual machines. The cloud provider typically provides the infrastructure necessary for the database to run, such as the physical servers and storage, but the user is responsible for all aspects of database administration, including backups, security, and scaling. In some cases, cloud providers may offer managed database services within their IaaS offering, which can take some of the database management responsibility off of the user's plate.
+```
+
+```
+Is the AWS service RDS IaaS or PaaS?
+
+Amazon RDS (Relational Database Service) is a managed database service provided by AWS, which falls under the category of PaaS (Platform as a Service). With RDS, AWS manages the underlying infrastructure and database management tasks such as backups, patching, scaling, and replication, while allowing users to focus on their applications and data.
+
+```
+
+```
+Is the AWS service ECS IaaS or PaaS?
+
+The AWS service ECS (Elastic Container Service) is a PaaS (Platform as a Service) offering. It provides a managed platform for running and scaling containerized applications.
+```
 
 #### SaaS
 Software as a Service (SaaS) is a Cloud service category in which a full application is provided to the cloud customer, and the cloud provider maintains responsibility for the entire infrastructure, platform, and application (ISO/IEC 17788).
@@ -228,10 +268,15 @@ Beyond the layers of physical facilities and computing hardware, there are diffe
 The image above shows the areas of responsibility within a cloud implementation. The shaded areas represent the responsibility on the part of the cloud provider.
 
 > 7.  Which area of responsibility lies with the customer in a PaaS implementation?
+>
 > A.   Application code
+>
 > B.   Security
+>
 > C.   Operating system
+>
 > D.   Storage
+>
 > **[A]. The application code is the responsibility of the customer within a PaaS service model.**
 
 #### Manage Resources vs. Unmanaged
@@ -306,6 +351,17 @@ Tokens are not mathematically related to the original data, which makes them mor
 
 The relationship between the token and the original data that is maintained through the use of a tokenization system. The **tokenization system generates a unique token** for each piece of sensitive data that needs to be tokenized, **and the token is then stored in a database alongside the original data**.
 
+### Tokenization vs Encryption
+```
+Encryption and tokenization are both methods used to protect sensitive data, but they operate in different ways.
+
+Encryption is the process of converting data into a coded language that can only be deciphered with a secret key or password. The encrypted data is still the original data, but it's scrambled in a way that makes it unreadable without the key. Encryption is used to protect data both at rest and in transit, such as passwords, credit card numbers, and other sensitive information.
+
+Tokenization, on the other hand, is the process of substituting sensitive data with a non-sensitive equivalent, called a token. The token has no mathematical relationship to the original data, and cannot be reverse-engineered to reveal the original data. Tokenization is commonly used to protect sensitive data in payment processing, where the token replaces the credit card number, for example.
+
+In summary, encryption protects data by scrambling it with a key, while tokenization substitutes the sensitive data with a non-sensitive equivalent.
+```
+
 ### Data Loss Prevention (DLP)
 DLP is a set of controls and practices put in place to ensure that data is only accessible and exposed to those users and systems authorized to have it.
 
@@ -357,11 +413,85 @@ AWS managed service for secure Git repositories.
 AWS CodeDeploy is a managed deployment service that can deploy code fully across AWS services or on-premises servers. 
 
 ### System Manager
-#### OpsCenter
-Provides a consolidated view  to investigate any operational issue. The Opscenter centralize data from CloudTrail logs, CloudWatch alarms, metrics, information about AWS configuration changes.
+- Helps you manage your EC2 and On-Premise systems at scale
+- Get operational insights about the state of your infrastructure
+- Easily detect problems
+- **Patching automation for enhanced compliance** (patch manager)
+- Integrated with CloudWatch metrics/dashboards
+- Integrated with AWS Config
+- Resource Groups
 
-#### Explorer
-A customizable dashboard that provides information on the health of your entire AWS environment and can consolidate data spanning multiple accounts and regions.
+![](system-manager-features.png)
+
+![](system-manager-agent.png)
+
+####  Patch Manager   
+Allows for automatically handling patching of systems across EC2 or on-premises systems through the use of baselines. Patch Manager allows for the scheduling of patching and auditing the status of them.
+
+####  Run command   
+Provides a way to run commands on servers within AWS without having to actually access them via SSH or PowerShell. The Run command logs all activities under CloudTrail and allows for granular access control via IAM.
+
+#### Parameter Store
+Provides a way to store configuration data for your applications. This can be either plain-text strings or passwords used to access services such as databases. A main benefit of the Parameter Store is the ability to use the same key but contain different values for systems. For example, you could have a hostname for a database or API call that gets a different value for systems that are flagged as development, test, or production but allows your code to remain the same throughout.
+
+####  AWS AppConfig
+Provides an API and console method for **applying configuration changes across AWS services** from a centralized service. AppConfig can quickly deploy configuration changes to different instances of compute services and ensure they are applied in a uniform and consistent manner.
+
+#### Other AWS System Manager Services
+- OpsCenter provides a consolidated view  to investigate any operational issue. The Opscenter centralize data from CloudTrail logs, CloudWatch alarms, metrics, information about AWS configuration changes.
+- Explorer a customizable dashboard that **provides information on the health of your entire AWS environment** and can consolidate data spanning multiple accounts and regions.
+- Insights dashboard
+- Inventory
+- Automation
+- Systems Manager
+- Maintenance Window
+- Distributor
+- State Manager
+
+### AWS Global Infrastructure
+
+#### AWS Regions
+AWS organizes resources throughout the world in regions.** Each region is a group of logical data centers, called *Availability Zones***. 
+
+When you provision resources within AWS, they can exist in only one region.
+
+#### How to choose AWS location? Factors to Consider
+- Customer locations
+- Security requirements
+- Regulatory requirements
+
+#### Services Endpoints
+The construction of AWS service endpoints uses the following formula:
+
+```
+AWS service designation + AWS region + amazonaws.com
+
+Example: ec2.eu-west-2.amazonaws.com
+```
+
+#### Availability Zones
+While regions represent a group or cluster of physical data centers, an **AWS Availability Zone represents those actual physical locations**.
+
+
+**There are direct connections for networking access between AWS Availability Zone**, and all traffic is encrypted. 
+
+This allows resources within a region to be spread out and clustered between the Availability Zones, without worrying about latency or security.
+
+All Availability Zones within a region are separated physically but are still within 60 miles (100 kilometers) of each other.
+
+When you provision resources within AWS, you will select the region (e.g. eu-south-1), but then you will also select the Availability Zone within that region. This will be designated by a letter after the region, such as _eu-south-1**a**_.
+
+#### Edge Locations
+To provide optimal responsiveness for customers, AWS maintains a network of Edge locations throughout the world to provide ultra-low-latency access to data.
+
+Edge locations are optimized to perform a narrow set of tasks and duties, allowing them to be optimally tuned and maintained for their intended focus, without being burdened by the full range of AWS services.
+
+Services That Use Edge:
+- CloudFront
+- Route 53
+- Shield
+- WAF
+- Lambda@Edge
 
 ## AWS Core Services Overview
 ![](aws-core-services-overview.png)
