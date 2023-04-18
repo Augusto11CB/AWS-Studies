@@ -481,6 +481,8 @@ All Availability Zones within a region are separated physically but are still wi
 
 When you provision resources within AWS, you will select the region (e.g. eu-south-1), but then you will also select the Availability Zone within that region. This will be designated by a letter after the region, such as _eu-south-1**a**_.
 
+![](aws-infrastructure.png)
+
 #### Edge Locations
 To provide optimal responsiveness for customers, AWS maintains a network of Edge locations throughout the world to provide ultra-low-latency access to data.
 
@@ -495,6 +497,9 @@ Services That Use Edge:
 
 ## AWS Core Services Overview
 ![](aws-core-services-overview.png)
+
+## AWS Foundational Services
+![](foundational-services.png)
 
 ### AWS Trusted Advisor
 The AWS Trusted Advisor provides a dashboard to check whether your account configurations comply with established best practices.
