@@ -1,4 +1,4 @@
-# [Smith Oreiily Course](https://sixth-gibbon-10e.notion.site/SMITH-Oreilly-Course-4094ab437d4b4f12a8df42bce9dc7feb?pvs=4)
+# [Smith Oreilly Course](https://sixth-gibbon-10e.notion.site/SMITH-Oreilly-Course-4094ab437d4b4f12a8df42bce9dc7feb?pvs=4)
 ## Cloud Practitioner Exam Details
 
 ![](image.png)
