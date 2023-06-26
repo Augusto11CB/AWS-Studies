@@ -1,7 +1,7 @@
 # [Smith Oreilly Course](https://sixth-gibbon-10e.notion.site/SMITH-Oreilly-Course-4094ab437d4b4f12a8df42bce9dc7feb?pvs=4)
 ## Table of Content
 - Domains
-  - Domain #1 - Cloud Concepts
+- Domain #1 - Cloud Concepts
   - Domain Points
   - AWS Official Definition
   - Cloud Value Proposition
