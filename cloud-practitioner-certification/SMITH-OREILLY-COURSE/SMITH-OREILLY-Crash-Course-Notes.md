@@ -1,4 +1,31 @@
 # [Smith Oreilly Course](https://sixth-gibbon-10e.notion.site/SMITH-Oreilly-Course-4094ab437d4b4f12a8df42bce9dc7feb?pvs=4)
+## Table of Content
+- Domains
+  - Domain #1 - Cloud Concepts
+  - Domain Points
+  - AWS Official Definition
+  - Cloud Value Proposition
+  - AWS Cloud economics
+  - TCO - Total Cost of Ownership
+  - Cloud Architecture Design Principles
+- Domain #2 - Security and Compliance
+  - Shared Responsibility Big Picture
+  - AWS Shared Responsibility Model
+  - Customer Responsibility
+  - At-rest Encryption
+  - In-Transit Encryption On AWS
+- Domain #3 - Technology
+  - Features of AWS Infrastructure
+  - AWS Foundational Services
+- Storage Services Overview
+  - S3 (Simple Storage Service)
+  - EBS (Elastic Block Store)
+  - EFS (Elastic File System)
+  - Others AWS Storage Services
+- Computer Services Overview
+  - EC2 (Elastic Compute Cloud)
+  - Lambda
+  - Elastic Beanstalk
 ## Cloud Practitioner Exam Details
 
 ![](image.png)
