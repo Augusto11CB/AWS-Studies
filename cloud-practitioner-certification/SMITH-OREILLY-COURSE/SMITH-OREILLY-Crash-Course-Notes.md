@@ -1,37 +1,4 @@
-# [Smith Oreilly Course](https://sixth-gibbon-10e.notion.site/SMITH-Oreilly-Course-4094ab437d4b4f12a8df42bce9dc7feb?pvs=4)
-## Table of Content
-- [Smith Oreilly Course](#smith-oreilly-course)
-  - [Table of Content](#table-of-content)
-  - [Cloud Practitioner Exam Details](#cloud-practitioner-exam-details)
-    - [What does the AWS Cloud Practitioner Certification Validate?](#what-does-the-aws-cloud-practitioner-certification-validate)
-    - [What is out of scope in AWS Cloud Practitioner Certification](#what-is-out-of-scope-in-aws-cloud-practitioner-certification)
-    - [Question Domains](#question-domains)
-    - [Question Format](#question-format)
-  - [Domain #1 - Cloud Concepts](#domain-1---cloud-concepts)
-    - [Domain Points](#domain-points)
-    - [AWS Official Definition](#aws-official-definition)
-    - [Cloud Value Proposition](#cloud-value-proposition)
-    - [AWS Cloud economics](#aws-cloud-economics)
-      - [TCO - Total Cost of Ownership](#tco---total-cost-of-ownership)
-      - [Cloud Software Licensing (???)](#cloud-software-licensing-)
-    - [Cloud Architecture Design Principles](#cloud-architecture-design-principles)
-      - [Design Principles](#design-principles)
-      - [Well-Architected Framework](#well-architected-framework)
-  - [Domain #2 - Security and Compliance](#domain-2---security-and-compliance)
-    - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
-    - [Customer Responsibility](#customer-responsibility)
-      - [Specific Controls](#specific-controls)
-    - [Shared Responsibility Big Picture](#shared-responsibility-big-picture)
-    - [Service Compliance Considerations](#service-compliance-considerations)
-    - [At-rest Encryption](#at-rest-encryption)
-    - [In-Transit Encryption On AWS](#in-transit-encryption-on-aws)
-    - [Auditing and Reporting - CloudWatch](#auditing-and-reporting---cloudwatch)
-      - [CloudWatch Logs](#cloudwatch-logs)
-    - [Auditing and Reporting - Config](#auditing-and-reporting---config)
-    - [Auditing and Reporting - CloudTrail](#auditing-and-reporting---cloudtrail)
-    - [Least Privilege - RBAC and ABAC](#least-privilege---rbac-and-abac)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+# Smith Oreilly Course
 
 ## Cloud Practitioner Exam Details
 
