@@ -16,3 +16,11 @@
 - [Module 7 - Monitoramento e Scaling](https://www.notion.so/Module-7-Monitoramento-e-Scaling-fe4c797f287b45bfa41e55eb37dd62d8?pvs=21)
 
 - [Modulo 8 - Automação](https://www.notion.so/Modulo-8-Automa-o-f54f769a34aa42f2ab9da8bc24d57cc8?pvs=21)
+
+- [Module 9 - Containers](https://www.notion.so/Module-9-Containers-1dd1dd18170d4c3f9b818a59507e07a4?pvs=21)
+
+- [Module 10 - Redes 2](https://www.notion.so/Module-10-Rede-2-49e424d2c14a47859733d4a34cb1e52d?pvs=21)
+
+- [Module 11 - Serverless](https://www.notion.so/Module-11-Serverless-fc427dbabe504758831d741527da4a74?pvs=21)
+
+- [Module 12 - Serviços de Borda](https://www.notion.so/Module-12-Servi-os-de-Borda-94de8b9afe634cba8a5462f4a1af8b54?pvs=21)
