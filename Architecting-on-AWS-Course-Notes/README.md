@@ -24,3 +24,8 @@
 - [Module 11 - Serverless](https://www.notion.so/Module-11-Serverless-fc427dbabe504758831d741527da4a74?pvs=21)
 
 - [Module 12 - Serviços de Borda](https://www.notion.so/Module-12-Servi-os-de-Borda-94de8b9afe634cba8a5462f4a1af8b54?pvs=21)
+
+---
+
+## Labs
+[Lab 2 - Compute and Network](./labs/lab-2-computer-and-network.md)
