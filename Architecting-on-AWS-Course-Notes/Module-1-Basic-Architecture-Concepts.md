@@ -1,0 +1,18 @@
+# Table of contents
+
+- [Module 1 - Conceitos Básicos de Arquitetura](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4)
+  - [Tópicos](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4#8a4ac59336874cb7928b7d82e0c4fa66)
+  - [Por que Migrar para AWS?](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4#b4f1f6e3c4354a5e8d2f754a2223f1c9)
+  - [Infraestrutura da AWS]([#infraestrutura-da-aws](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4#00a5c9c43c8842bf93936b9d6dd6c100))
+    - [Availability Zones (Zonas de Disponibilidades)](#availability-zones-zonas-de-disponibilidades)
+    - [AWS Regiões](#aws-regies)
+    - [Fatores que Afetam Seleção de Região](#fatores-que-afetam-seleo-de-regio)
+    - [****AWS Local Zones****](#aws-local-zones)
+    - [AWS Edge Locations](#aws-edge-locations)
+    - [AWS Local Zones vs Edge Locations](#aws-local-zones-vs-edge-locations)
+  - [AWS Well-Architected Framework]([#aws-well-architected-framework](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4#3c2031718fa9432898791249e52f50e4))
+    - [Responsabilidades do Arquiteto da AWS](#responsabilidades-do-arquiteto-da-aws)
+    - [Pilares Well-Architected Framework](#pilares-well-architected-framework)
+    - [AWS WA Tool](#aws-wa-tool)
+  - [Module Review](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4#5aff54de83df4d9490a40df008628860)
+  - [Questões](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4#2b3f523db3244867a4db820b4204fd89)
