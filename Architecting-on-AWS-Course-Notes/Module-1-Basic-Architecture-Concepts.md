@@ -1,6 +1,5 @@
-# Table of contents
+# (https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4) - Table of contents
 
-- [Module 1 - Conceitos Básicos de Arquitetura](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4)
   - [Tópicos](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4#8a4ac59336874cb7928b7d82e0c4fa66)
   - [Por que Migrar para AWS?](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4#b4f1f6e3c4354a5e8d2f754a2223f1c9)
   - [Infraestrutura da AWS](https://www.notion.so/Module-1-Conceitos-B-sicos-de-Arquitetura-535c9089b3f144269e6cc4d992e09cfe?pvs=4#00a5c9c43c8842bf93936b9d6dd6c100)
