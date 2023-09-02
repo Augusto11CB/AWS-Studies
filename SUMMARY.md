@@ -12,13 +12,6 @@
     * [lab-2-computer-and-network](Architecting-on-AWS-Course-Notes/labs/lab-2-computer-and-network.md)
     * [lab-6-amazon-cloudfront-s3](Architecting-on-AWS-Course-Notes/labs/lab-6-amazon-cloudfront-s3.md)
     * [lab-7-final-project](Architecting-on-AWS-Course-Notes/labs/lab-7-final-project.md)
-* [AWS Cloud Practitioner Certification](cloud-practitioner-certification/README.md)
-  * [Notion Annotations for the Cloud Practioner Certification Exam](cloud-practitioner-certification/Notes.md)
-  * [CARTER-AWS-Exam-Guide-CLF-C01](cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01/README.md)
-    * [4. Core AWS Services](cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01/CARTER-Exam-Guide-CLF-C01-Core-Services.md)
-    * [Notes of AWS Certified Cloud Practitioner All-in-One Exam Guide (Exam CLF-C01)](cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01/CARTER-Exam-Guide-CLF-C01.md)
-  * [SMITH-OREILLY-COURSE](cloud-practitioner-certification/SMITH-OREILLY-COURSE/README.md)
-    * [Smith Oreilly Course](cloud-practitioner-certification/SMITH-OREILLY-COURSE/SMITH-OREILLY-Crash-Course-Notes.md)
 
 ## AWS Certified Developer
 
@@ -29,3 +22,11 @@
 ***
 
 * [AWS API Gateway](aws-api-gateway.md)
+
+## AWS CLOUD PRACTITIONER
+
+* [AWS Cloud Practitioner](aws-cloud-practitioner/aws-cloud-practitioner.md)
+* [Notion Annotations for the Cloud Practioner Certification Exam](aws-cloud-practitioner/notes.md)
+* [CARTER AWS Exam Guide CLF-C01](aws-cloud-practitioner/carter-aws-exam-guide-clf-c01/README.md)
+  * [Core AWS Services](aws-cloud-practitioner/carter-aws-exam-guide-clf-c01/carter-exam-guide-clf-c01-core-services.md)
+* [SMITH  Certified Cloud Practitioner CLF-C01](aws-cloud-practitioner/smith-oreilly-course.md)
