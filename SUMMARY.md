@@ -29,4 +29,6 @@
 * [Notion Annotations for the Cloud Practioner Certification Exam](aws-cloud-practitioner/notes.md)
 * [CARTER AWS Exam Guide CLF-C01](aws-cloud-practitioner/carter-aws-exam-guide-clf-c01/README.md)
   * [Core AWS Services](aws-cloud-practitioner/carter-aws-exam-guide-clf-c01/carter-exam-guide-clf-c01-core-services.md)
-* [SMITH  Certified Cloud Practitioner CLF-C01](aws-cloud-practitioner/smith-oreilly-course.md)
+* [SMITH  Certified Cloud Practitioner CLF-C01](aws-cloud-practitioner/smith-oreilly-course/README.md)
+  * [Domain 1 - Cloud Concepts](aws-cloud-practitioner/smith-oreilly-course/domain-1-cloud-concepts.md)
+  * [Domain 2 - Security and Compliance](aws-cloud-practitioner/smith-oreilly-course/domain-2-security-and-compliance.md)
