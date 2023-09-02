@@ -1,6 +1,6 @@
 # Table of contents
 
-* [AWS API Gateway](README.md)
+* [AWS](README.md)
 * [Amazon Elastic Container Service (ECS)](Amazon-Elastic-Container-Service.md)
 * [AWS Cognito](Cognito.md)
 * [Identity and Access Management - IAM](Identity-Access-Management-IAM.md)
@@ -24,3 +24,8 @@
 
 * [MAAREK Certified Cloud Practitioner DVA-C02](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/README.md)
   * [IAM and AWS CLI](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/iam-and-aws-cli.md)
+* [AWS Certified Developer](aws-certified-developer/aws-certified-developer.md)
+
+***
+
+* [AWS API Gateway](aws-api-gateway.md)
