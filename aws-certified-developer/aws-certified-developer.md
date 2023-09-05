@@ -12,3 +12,9 @@
 * ECS, ECR & Fargate: Docker in AWS
 * AWS Security best practices: KMS, Encryption SDK, SSM Parameter Store, IAM Policies
 * AWS Other Services Overview: CloudFront, Step Functions, SWF, Redshift\
+
+
+### Materials
+
+* [AWS Certified Developer Associate Exam Guide Study Path DVA-C02](https://tutorialsdojo.com/aws-certified-developer-associate-exam-guide-study-path-dva-c02/)
+* [How I Passed AWS Developer Associate in 2 Weeks](https://www.youtube.com/watch?v=8VBbc8EPHWY\&t=12s)
