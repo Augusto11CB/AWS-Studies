@@ -456,7 +456,7 @@ You can configure CloudFront to add additional geolocation headers that provide 
 
 
 
-![](<../.gitbook/assets/image (10).png>)\
+![](<../.gitbook/assets/image (10) (1).png>)\
 
 
 </details>
@@ -476,7 +476,7 @@ A company wants to utilize AWS storage. For them, low storage cost is paramount.
 
 B
 
-![](<../.gitbook/assets/image (11).png>)
+![](<../.gitbook/assets/image (11) (1).png>)
 
 </details>
 

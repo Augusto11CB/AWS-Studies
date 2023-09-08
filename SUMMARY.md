@@ -28,7 +28,7 @@
 ## AWS CLOUD PRACTITIONER
 
 * [AWS Cloud Practitioner](aws-cloud-practitioner/aws-cloud-practitioner.md)
-* [Notion Annotations for the Cloud Practioner Certification Exam](aws-cloud-practitioner/notes.md)
+* [SHANNON AWS Certified Cloud Practitioner CLF-C01](aws-cloud-practitioner/notes.md)
 * [AWS Support Plans Diff](aws-cloud-practitioner/aws-support-plans-diff.md)
 * [CARTER AWS Exam Guide CLF-C01](aws-cloud-practitioner/carter-aws-exam-guide-clf-c01/README.md)
   * [Core AWS Services](aws-cloud-practitioner/carter-aws-exam-guide-clf-c01/carter-exam-guide-clf-c01-core-services.md)
