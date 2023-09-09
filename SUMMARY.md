@@ -19,11 +19,12 @@
 
 ## AWS Certified Developer
 
+* [AWS Certified Developer](aws-certified-developer/aws-certified-developer.md)
 * [MAAREK Certified Cloud Practitioner DVA-C02](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/README.md)
   * [IAM and AWS CLI](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/iam-and-aws-cli.md)
   * [EC2 Fundamentals](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ec2-fundamentals.md)
   * [EC2 Instance Storage](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ec2-instance-storage.md)
-* [AWS Certified Developer](aws-certified-developer/aws-certified-developer.md)
+  * [ELB and ASG](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/elb-and-asg.md)
 
 ## AWS CLOUD PRACTITIONER
 
