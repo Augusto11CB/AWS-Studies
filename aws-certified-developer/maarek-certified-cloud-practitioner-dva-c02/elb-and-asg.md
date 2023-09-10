@@ -42,17 +42,17 @@
 
 #### Load Balancer Security Groups
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Load Balancer's Security Group:**
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Users can access load balancer from anywhere using HTTP or HTTPS.
 
 **Application's Security Group:**
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Allow traffic only from Load Balancer.
 * The source of it is the Load Balancer's Security Group (sg-054b5ff5ea02f2b6e)
@@ -107,7 +107,7 @@
 * Application Load Balancer.
 * Health Checks support the TCP, HTTP and HTTPS Protocols.
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Gateway Load Balancer
 
@@ -119,7 +119,7 @@
     * deep packet inspection system.
     * **payload manipulation**.
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * &#x20;Uses the **GENEVE** protocol on port 6081
 * Operates at Layer 3 (Network Layer) – IP Packets.
@@ -132,7 +132,7 @@
 * EC2 Instances.
 * IP Addresses (must be private IPs).
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 
 
@@ -146,7 +146,7 @@
 * Use case: make sure the user doesn’t lose his session data.
 * :warning:Enabling stickiness may bring **imbalance** to the load over the backend EC2 instances.
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 
 
@@ -177,7 +177,7 @@ There are two kind of cookies in this within the application-basesd cookies (cus
 
 
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 
 
@@ -187,7 +187,7 @@ Cross-Zone Load Balancing is an option for load balancers on AWS that allows the
 
 This means that if one Availability Zone has more traffic than another, the load balancer can balance the load by sending some requests to the targets in the less busy Availability Zone (AWS, 2023a).
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * ALB&#x20;
   * :bangbang:Enabled by default (can be disabled at the Target Group level).
@@ -200,21 +200,21 @@ This means that if one Availability Zone has more traffic than another, the load
 
 Feature enabled by default in the ALB.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 In order to turn this feature off:
 
 (1) go to the ALB target group.
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 (2) go to attributes and edit it.
 
-<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 
 
@@ -233,7 +233,7 @@ In order to turn this feature off:
 
 
 
-      <figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 
 
@@ -247,15 +247,115 @@ In order to turn this feature off:
 * Between 1 to 3600 seconds (default: 300 seconds).
 * Can be disablet (set value to 0).
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 
 
 ### Auto Scaling Group (ASG)
 
-<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+* The goal of an ASG is to:
+  * Scale out (add EC2 instances) to match an increased load.
+  * Scale in (remove EC2 instances) to match a decreased load.
+  * Ensure we have a minimum and a maximum number of EC2 instances running.
+  * Automatically register new instances to a load balancer.
+  * Re-create an EC2 instance in case a previus one is terminated (ex: if unhealthy).
+* ASG are Free.
 
-###
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### ASG in AWS with ELB
+
+* ELB distribute traffic across the EC2 instances registered and running in a ASG.
+* ELB can check the health of EC2 instances.
+  * The health check is passed on to the ASG. ASG terminate instances if they are deemed unhealthy by the load balancer.
+
+
+
+#### ASG Scaling Group Attributes
+
+* A Launch Template&#x20;
+  * AMI + Instance Type.
+  * EC2 User Data.
+  * EBS Volumes.
+  * Security Groups.
+  * SSH Key Pair.
+  * IAM Roles for your EC2 instances.
+  * Network + Subnets information.
+  * Load Balancer information.
+* Min size, max size, initial capacity.
+
+<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### ASG Auto Scaling - CloudWatch Alarms & Scaling
+
+* It is possible to scale an ASG based on Cloudwatch alarms.
+* An alarm monitors a metric (such as Average CPU, or a custom metric).
+* :exclamation::exclamation:**Metrics such as Average CPU are computed for the overall (as a whole) ASG instances.**
+* Based on the alarm:
+  * We can create scale-out policies (increase the number of instances).
+  * We can create scale-in policies.
+
+<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### Dynamic Scaling Policies
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+* Target Tracking Scaling:&#x20;
+  * Most simple and easy to set-up.
+  * Example: I want the average ASG CPU to stay at around 40%.
+
+<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+* Simple / Step Scaling:&#x20;
+  * When a CloudWatch alarm is triggered (example CPU > 70%), then add 2 units.&#x20;
+  * When a CloudWatch alarm is triggered (example CPU < 30%), then remove 1 unit.
+*   Scheduled Actions&#x20;
+
+    * Anticipate a scaling based on known usage patterns.
+    * Example: increase the min capacity to 10 at 5 pm on Fridays.
+
+
+
+    <figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### Predictive Scaling
+
+* Predictive scaling: continuously forecast load and schedule scaling ahead.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### Good metrics to scale on
+
+* CPUUtilization: Average CPU utilization across your instances.&#x20;
+* RequestCountPerTarget: to make sure the number of requests per EC2 instances is stable.
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+* Average Network In / Out (if you’re application is network bound).
+* Any custom metric (that you push using CloudWatch).
+
+#### Scaling Cooldowns
+
+* After a scaling activity happens, you are in the cooldown period ( :exclamation: default 300 seconds).
+* During the cooldown period, [**the ASG will not launch or terminate additional instances**](#user-content-fn-1)[^1] (to allow for metrics to stabilize).
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### Auto Scaling - Instance Refresh
+
+* Goal: update launch template and then re=creating all EC2 instances.
+* For this we can use the native feature of instance refresh.
+* Setting of minimum healthy percentage.
+* Specify warm-up time (how long until the instance is ready to use).
+
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+
 
 ###
 
@@ -267,3 +367,6 @@ In order to turn this feature off:
 
 
 
+
+
+[^1]: 

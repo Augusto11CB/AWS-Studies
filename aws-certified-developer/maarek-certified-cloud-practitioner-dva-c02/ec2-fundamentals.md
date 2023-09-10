@@ -41,7 +41,7 @@
 * Security Groups are the fundamental of network security in AWS.
 * They act as a "firewall".
 * They control how traffic is allowed into or out of our EC2 Instances.
-  1. ![](<../../.gitbook/assets/image (6) (1) (1).png>)
+  1. ![](<../../.gitbook/assets/image (6) (1) (1) (1).png>)
 * Security groups only contain **allow** rules.
 * Security groups rules can reference by IP or by security group.
 
@@ -54,7 +54,7 @@
 * Control of inbound network (from other to the instance).
 * Control of outbound network (from the instance to other).
 * AWS Console example:
-  * ![](<../../.gitbook/assets/image (7) (1) (1).png>)
+  * ![](<../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 #### Good to Know About Security Groups
 
