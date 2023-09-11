@@ -25,6 +25,7 @@
   * [EC2 Fundamentals](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ec2-fundamentals.md)
   * [EC2 Instance Storage](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ec2-instance-storage.md)
   * [ELB and ASG](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/elb-and-asg.md)
+  * [RDS, Aurora and ElastiCache](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/rds-aurora-and-elasticache.md)
 
 ## AWS CLOUD PRACTITIONER
 
