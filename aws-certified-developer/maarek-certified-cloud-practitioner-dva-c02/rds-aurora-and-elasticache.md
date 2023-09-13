@@ -124,7 +124,7 @@
 
 #### Aurora DB Cluster
 
-<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 > Now that you have auto-scaling, it can be difficult for your application to keep track of where are your read replicas. What is the URL for the newest read replicas. How do I connect to them?
 >
@@ -132,9 +132,9 @@
 >
 > by MAAREK, 2023.
 
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Aurora's Features
 
@@ -217,6 +217,103 @@ Lambda functions can scale rapidly, creating and terminating connections very qu
 To address this problem, RDS Proxy can be used. The RDS Proxy acts as an intermediary layer between Lambda functions and the RDS database. It efficiently manages and pools database connections, handling the rapid influx and termination of connections from Lambda functions.
 
 :exclamation:**By using the RDS Proxy, Lambda functions can continue to scale and create connections without overwhelming the RDS database instance.** The RDS Proxy optimizes the connection pooling process, reducing the number of connections required between the Lambda functions and the database.
+
+
+
+### Amazon ElastiCache
+
+* The same way RDS is to get managed relational Databases.
+* ElastiCache is to get managed Redis or Memcached.
+* Caches are in-memory databases with really high performance, low latency.
+* Helps reduce load off of databases for read intensive workloads.
+* Helps make your application stateless.
+* Note: Using ElastiCache involves heavy application code changes.
+
+#### ElastiCache Solution Architecture - DB Cache
+
+* Applications queries ElastiCache, if not available, get from RDS and store in ElastiCache.
+* Helps relieve load in RDS.
+* Cache must have an invalidation strategy to make sure only the most current data is used in there.
+
+<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### ElastiCache Solution Architecture - User Session Store
+
+* User logs into any of the application.
+* The application writes the session data into ElastiCache.
+* The user hits another instance of our application.
+* The instance retrieves the data and the user is already logged in.
+* Note: By doing this, your application became stateless.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+
+
+#### ElastiCache Redis vs. Memcached (MAAREK, 2023)
+
+| Redis                                                                      | Memcached                           |
+| -------------------------------------------------------------------------- | ----------------------------------- |
+| Multi AZ with Auto-Failover.                                               | Multi-node for par.                 |
+| Read Replicas to scale reads and have **high availability (replication)**. | No high availability (replication). |
+| **Data durability** using AOF persistence.                                 | Non persistent.                     |
+| Backup and restore features.                                               | No backup and restore.              |
+| Supports Sets and Sorted Sets                                              | multi-threaded architecture.        |
+
+### Caching Implementation
+
+#### Caching Considerations
+
+* Is it safe to cache data? Data may be out of date, eventually consistent.
+* **Is caching effective for that data?**
+  * Pattern: data changing slowly, few keys are frequently needed.
+  * Anti-pattern: data changing rapidly, all large key space frequently needed.
+* **Is data structured well for caching?**
+  * example: key value caching, or caching of aggregations result.
+* Cache Patterns:&#x20;
+  * Lazy Loading/ Cache-Aside/ Lazy Population.
+  * Write Through.
+
+#### Cache Pattern: Lazy Loading (or Cache- Aside, Lazy Population)
+
+| Pros                                                                         | Cons                                                                                 |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Only requested data is cached (the cache is not filled up with unused data). | Cache miss penalty that results in 3 roud trips (noticeable delay for that request). |
+| Node failures are not fatal (just increased latency to warm the cache).      | Stale data: Data can be updated in the database and outdatd in the cache.            |
+
+<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### Cache Pattern: Write Through&#x20;
+
+* Add or Update cache when database is updated.
+
+| Pros                                           | Cons                                                                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Data in cache is never stale, reads are quick. | Write penalty (each write requires 2 calls).                                                                 |
+|                                                | Missing data until it is added/updated in the DB (mitigation is to implement lazy loading strategy as well). |
+
+<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### Cache Evictions and Time-to-live (TTL)
+
+Cache eviction can occur in three ways:
+
+* You delete the item explicitly in the cache.
+* Item is evicted because the memory is full and it’s not recently used (LRU).
+* You set an item time-to-live (or TTL).
+
+If too many evictions happen due to memory, you should scale up or out.
+
+
+
+### Amazon MemoryDB for Redis.
+
+While Amazon ElastiCache for Redis is a managed version of Redis, an in-memory data store used mainly for caching,Amazon MemoryDB for Redis aims to replace both cache and database in one component.&#x20;
+
+MemoryDB also supports multi-AZ availability with up to 5 replicas in different AZs.
+
+It offers strong consistency on the primary node, eventual consistency reads on replica nodes.
+
+Use case: If your workload requires a durable database that provides ultra-fast performance, you should consider using Amazon MemoryDB for Redis.
 
 ### Reference
 
