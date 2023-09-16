@@ -14,7 +14,7 @@ AWS Direct Connect and VPN are two different connectivity options for businesses
 * Is suitable for larger businesses or organisations with higher data transfer needs.
 * Is more expensive than VPN.
 
-<figure><img src=".gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>SHANNON, 2023</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>SHANNON, 2023</p></figcaption></figure>
 
 ### AWS VPN
 

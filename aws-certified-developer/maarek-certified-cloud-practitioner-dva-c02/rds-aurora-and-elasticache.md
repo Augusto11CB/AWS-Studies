@@ -228,6 +228,7 @@ To address this problem, RDS Proxy can be used. The RDS Proxy acts as an interme
 * Helps reduce load off of databases for read intensive workloads.
 * Helps make your application stateless.
 * Note: Using ElastiCache involves heavy application code changes.
+* The maximum number of Read Replicas you can add in an ElastiCache Redis Cluster with Cluster-Mode Disabled is 5.
 
 #### ElastiCache Solution Architecture - DB Cache
 
@@ -295,17 +296,29 @@ To address this problem, RDS Proxy can be used. The RDS Proxy acts as an interme
 
 #### Cache Evictions and Time-to-live (TTL)
 
-Cache eviction can occur in three ways:
+* Cache eviction can occur in three ways:
+  * You delete the item explicitly in the cache.
+  * Item is evicted because the memory is full and it’s not recently used (LRU).
+  * You set an item time-to-live (or TTL).
+* If too many evictions happen due to memory, you should scale up or out.
 
-* You delete the item explicitly in the cache.
-* Item is evicted because the memory is full and it’s not recently used (LRU).
-* You set an item time-to-live (or TTL).
+Question: You have an ElastiCache Redis Cluster that serves a popular application. You have noticed that there are a large number of requests that go to the database because a large number of items are removed from the cache before they expire. What is this called and how to solve it?
 
-If too many evictions happen due to memory, you should scale up or out.
+<details>
 
+<summary>Answer</summary>
 
+Cache Evictions, Scale up or out your elasticCache redis Cluster
+
+</details>
 
 ### Amazon MemoryDB for Redis.
+
+* Redis-compatible, **durable**, in-memory database service.
+* The main difference between Redis and MemoryDB for Redis, is that while Redis is intent to be used as a cache DB with some durability, **MemoryDB is really a database** that has a Redis compatible API**.**
+* **It is in-memory DB, but it's durable data storage with Multi-AZ transaction log.**
+  * "Multi-AZ transaction log" refers to the mechanism MemoryDB uses to replicate changes made to the data across these Availability Zones. The transaction log records and replicates all data modifications, ensuring data consistency and minimizing the risk of data loss in the event of an AZ failure.
+  * See more about what is transaction logs in this note: [Database Concepts](http://127.0.0.1:5000/s/uBtdKjBB6wlw1AXXdtRP/database-concepts "mention")
 
 While Amazon ElastiCache for Redis is a managed version of Redis, an in-memory data store used mainly for caching,Amazon MemoryDB for Redis aims to replace both cache and database in one component.&#x20;
 
@@ -314,6 +327,10 @@ MemoryDB also supports multi-AZ availability with up to 5 replicas in different 
 It offers strong consistency on the primary node, eventual consistency reads on replica nodes.
 
 Use case: If your workload requires a durable database that provides ultra-fast performance, you should consider using Amazon MemoryDB for Redis.
+
+
+
+<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Reference
 

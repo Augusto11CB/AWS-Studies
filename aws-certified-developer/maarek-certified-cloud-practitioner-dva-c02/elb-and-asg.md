@@ -325,7 +325,7 @@ In order to turn this feature off:
 
 * Predictive scaling: continuously forecast load and schedule scaling ahead.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
@@ -334,7 +334,7 @@ In order to turn this feature off:
 * CPUUtilization: Average CPU utilization across your instances.&#x20;
 * RequestCountPerTarget: to make sure the number of requests per EC2 instances is stable.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Average Network In / Out (if you’re application is network bound).
 * Any custom metric (that you push using CloudWatch).
