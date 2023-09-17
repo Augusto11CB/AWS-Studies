@@ -29,7 +29,7 @@
 * Private Hosted Zones: Contains records that specify how you route traffic within one or more VPCs (private domain names).
 * Note: You pay $0,50 per month per hosted zone.
 
-<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Route 53 - Records TTL&#x20;
 
@@ -42,7 +42,7 @@
   * Easy to change records.
 * Note: Except for alias records, TTL is mandatory for each DNS record.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Route 53 - CNAME vs Alias
 
@@ -115,7 +115,7 @@
 * Assign a weight of 0 to a record to stop sending traffic to a resource.
 * If all records have weight of 0, then all records will be returned equally.
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Route 53 - Weighted Routing Policy
 
@@ -129,13 +129,13 @@
 * Amazon Route 53’s Failover (Active-Passive) Routing Policy is designed to achieve high availability by routing traffic to a primary resource or group of resources, and switching to a secondary resource or group of resources in case of a failure.
 * Amazon Route 53 includes only the healthy primary resources3. **If all the primary resources are unhealthy**, Route 53 begins to **include only the healthy secondary resources** in response to DNS queries.
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Console Config:**
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 Create a simple health check for the endpoint and it will work. If the primary record (1) fails, the result returned to the DNS will be record (2).
 
@@ -147,7 +147,7 @@ Create a simple health check for the endpoint and it will work. If the primary r
 * Use cases: website localization, restrict content distribution, load balancing, …
 * Can be associated with Health Checks.
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Route 53 - Geoproximity Routing Policy
 
@@ -163,9 +163,9 @@ Create a simple health check for the endpoint and it will work. If the primary r
 
 **Diagram Example:**
 
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Route 53 - Traffic Flow **Console Config** Geoproximity Routing Policy
 
@@ -175,11 +175,11 @@ Create a simple health check for the endpoint and it will work. If the primary r
   * Can be applied to different Route 53 Hosted Zones (different domain names).
   * Supports versioning.
 
-<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Route 53 - Geolocation Routing Policy
 
@@ -188,7 +188,7 @@ Create a simple health check for the endpoint and it will work. If the primary r
 * **Use cases:** Optimize performance, reduce network costs…
 * **Example:** route end users from a particular ISP to a specific endpoint.
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Route 53 - Multi-Value Routing Policy
 
@@ -200,17 +200,17 @@ Create a simple health check for the endpoint and it will work. If the primary r
 
 **Scenario When All Endpoints are Healthy**
 
-<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Scenario When There is an unheathy endpoint**
 
-<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Route 53 -  Health Checks
 
@@ -232,7 +232,7 @@ Create a simple health check for the endpoint and it will work. If the primary r
 * Health Checks can be setup to pass / fail based on the text in the first 5120 bytes of the response.
 * :warning:]Configure you router/firewall to allow incoming requests from Route 53 Health Checkers.
 
-<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Health Cheks - Calculated Health Checks
 
@@ -242,7 +242,7 @@ Create a simple health check for the endpoint and it will work. If the primary r
 * Specify how many of the health checks need to pass to make the parent pass.
 * Usage: perform maintenance to your website without causing all health checks to fail.
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Health Checks - Private Hosted Zones
 
@@ -250,7 +250,7 @@ Create a simple health check for the endpoint and it will work. If the primary r
 * :warning: They can’t access private endpoints (private VPC or on-premises resource).
 * You can **create a CloudWatch Metric and associate a CloudWatch Alarm**, then create a **Health Check** that **checks the alarm** itself.
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Domain Registar vs. DNS Service
 
@@ -259,17 +259,10 @@ Create a simple health check for the endpoint and it will work. If the primary r
 * But you can use another DNS service to manage your DNS records.
 * Example: purchase the domain from GoDaddy and use Route 53 to manage your DNS records.
 
-<figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * • If you buy your domain on a 3rd party registrar, you can still use Route 53 as the DNS Service provider:
   * (1) Create a Hosted Zone in Route 53.
   * (2) Update NS Records on 3rd party website to use Route 53 Name Servers.
 * :exclamation::warning: Domain Registrar != DNS Service.
 * But every Domain Registrar usually comes with some DNS features.
-
-
-
-
-
-
-

@@ -1,14 +1,11 @@
 # EC2 Fundamentals
 
 * EC2 = Elastic Compute Cloud = Infrastructure as a Service&#x20;
-*   It mainly consists in the capability of :&#x20;
-
-    * Renting virtual machines (EC2).
-    * Storing data on virtual drives (EBS).
-    * Distributing load across machines (ELB).
-    * Scaling the services using an auto-scaling group (ASG).
-
-
+* It mainly consists in the capability of :&#x20;
+  * Renting virtual machines (EC2).
+  * Storing data on virtual drives (EBS).
+  * Distributing load across machines (ELB).
+  * Scaling the services using an auto-scaling group (ASG).
 
 ### EC2 Sizing and Configuration Options
 
@@ -21,8 +18,6 @@
 * Network card: speed of the card, Public IP.
 * Firewall rules: **security group.**
 * Bootstrap script (configure at first launch).
-
-
 
 ### EC2 User Data
 
@@ -40,12 +35,11 @@
 
 * Security Groups are the fundamental of network security in AWS.
 * They act as a "firewall".
-* They control how traffic is allowed into or out of our EC2 Instances.
-  1. ![](<../../.gitbook/assets/image (6) (1) (1) (1).png>)
+*   They control how traffic is allowed into or out of our EC2 Instances.
+
+    <figure><img src="../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 * Security groups only contain **allow** rules.
 * Security groups rules can reference by IP or by security group.
-
-
 
 **What does Security Group regulate?**
 
@@ -53,8 +47,11 @@
 * Authorised IP ranges.
 * Control of inbound network (from other to the instance).
 * Control of outbound network (from the instance to other).
-* AWS Console example:
-  * ![](<../../.gitbook/assets/image (7) (1) (1) (1).png>)
+*   AWS Console example:
+
+
+
+    <figure><img src="../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Good to Know About Security Groups
 
@@ -75,8 +72,6 @@
 * 80 = HTTP - access unsecured websites.
 * 443 = HTTPS - access secured websites.
 * 3389 = (Remote Desktop Protocol) - Log into a windows instance.
-
-
 
 ### EC2 Instances Purchasing Options
 

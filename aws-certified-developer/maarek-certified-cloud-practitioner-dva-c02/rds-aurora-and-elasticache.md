@@ -37,8 +37,6 @@
   * At least six hours have passed since the last storage modification, or storage optimization has completed on the instance, whichever is longer.
 * Useful for applications with unpredictable workloads.
 
-
-
 #### RDS Read Replicas
 
 * Up to 15 Read Replicas
@@ -65,7 +63,7 @@
 
 * :exclamation: For RDS Read Replicas within the same region, you don’t pay the fee where data goes from one AZ to another.
 
-<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### RDS Multi AZ (Disaster Recovery)
 
@@ -87,8 +85,6 @@
   * A snapshot is taken.
   * &#x20;A new DB is restored from the snapshot in a new AZ.
   * Synchronization is established between the two databases.
-
-
 
 ### Amazon Aurora
 
@@ -120,8 +116,6 @@
 
 <figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-
-
 #### Aurora DB Cluster
 
 <figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
@@ -139,8 +133,6 @@
 #### Aurora's Features
 
 • Automatic fail-over • Backup and Recovery • Isolation and security • Industry compliance • Push-button scaling • Automated Patching with Zero Downtime • Advanced Monitoring • Routine Maintenance • Backtrack: restore data at any point of time without using backups.
-
-
 
 ### RDS & Aurora Security
 
@@ -218,8 +210,6 @@ To address this problem, RDS Proxy can be used. The RDS Proxy acts as an interme
 
 :exclamation:**By using the RDS Proxy, Lambda functions can continue to scale and create connections without overwhelming the RDS database instance.** The RDS Proxy optimizes the connection pooling process, reducing the number of connections required between the Lambda functions and the database.
 
-
-
 ### Amazon ElastiCache
 
 * The same way RDS is to get managed relational Databases.
@@ -247,8 +237,6 @@ To address this problem, RDS Proxy can be used. The RDS Proxy acts as an interme
 * Note: By doing this, your application became stateless.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-
-
 
 #### ElastiCache Redis vs. Memcached (MAAREK, 2023)
 
@@ -327,8 +315,6 @@ MemoryDB also supports multi-AZ availability with up to 5 replicas in different 
 It offers strong consistency on the primary node, eventual consistency reads on replica nodes.
 
 Use case: If your workload requires a durable database that provides ultra-fast performance, you should consider using Amazon MemoryDB for Redis.
-
-
 
 <figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 

@@ -46,8 +46,6 @@
 * IAM Access Advisor (user-level)
   * Tool that **shows the service permissions granted to a user** and when those services were last accessed.
 
-
-
 ### IAM Section - Summary
 
 * Users: mapped to a physical user, has a password for AWS Console.
@@ -60,8 +58,6 @@
 * Access Keys: Access AWS using the CLI or SDK.
 * **Audit:** IAM Credentials Reports & IAM Access Advisor.
 
-
-
 ### Security Groups
 
 * Security Groups are the fundamental of network security in AWS.
@@ -72,6 +68,6 @@
 
 
     <figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-* Security groups only contain **allow** rules;
-* Security groups rules **can reference** by **IP** or by **security group**
+* Security groups only contain **allow** rules.
+* Security groups rules **can reference** by **IP** or by **security group.**
 

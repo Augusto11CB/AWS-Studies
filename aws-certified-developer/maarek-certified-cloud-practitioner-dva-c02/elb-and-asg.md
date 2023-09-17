@@ -57,8 +57,6 @@
 * Allow traffic only from Load Balancer.
 * The source of it is the Load Balancer's Security Group (sg-054b5ff5ea02f2b6e)
 
-
-
 ### Application Load Balancer
 
 * Application load balancers is Layer 7 (HTTP).
@@ -87,8 +85,6 @@
 * The application servers don’t see the IP of the client directly.
   * • The true IP of the client is inserted in the header `X-Forwarded-For`.
   * We can also get Port (`X-Forwarded-Port`) and proto (`X-Forwarded-Proto`).
-
-
 
 ### Network Load Balancer
 
@@ -134,10 +130,6 @@
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-
-
-
-
 ### ELB Sticky Sessions (Session Affinity)
 
 * It is possible to implement stickiness by using "_**cookies**_" so that the same client is always redirected to the same instance behind a load balancer.
@@ -147,10 +139,6 @@
 * :warning:Enabling stickiness may bring **imbalance** to the load over the backend EC2 instances.
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-
-
-
-#### Cooki
 
 #### Cookie Names
 
@@ -179,8 +167,6 @@ There are two kind of cookies in this within the application-basesd cookies (cus
 
 <figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-
-
 ### Cross-Zone Load Balancing
 
 Cross-Zone Load Balancing is an option for load balancers on AWS that allows them to distribute traffic across the registered targets in all enabled Availability Zones, instead of only within the same Availability Zone (AWS, 2023a).&#x20;
@@ -202,7 +188,7 @@ Feature enabled by default in the ALB.
 
 <figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-In order to turn this feature off:
+**In order to turn this feature off:**
 
 (1) go to the ALB target group.
 
@@ -215,8 +201,6 @@ In order to turn this feature off:
 <figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-
-
 
 ### Load Balancer - SSL Certificates
 
@@ -235,8 +219,6 @@ In order to turn this feature off:
 
       <figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-
-
 ### Connection Draining (Deregistration Delay)
 
 * Feature naming
@@ -248,8 +230,6 @@ In order to turn this feature off:
 * Can be disablet (set value to 0).
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-
-
 
 ### Auto Scaling Group (ASG)
 
@@ -270,8 +250,6 @@ In order to turn this feature off:
 * ELB distribute traffic across the EC2 instances registered and running in a ASG.
 * ELB can check the health of EC2 instances.
   * The health check is passed on to the ASG. ASG terminate instances if they are deemed unhealthy by the load balancer.
-
-
 
 #### ASG Scaling Group Attributes
 
@@ -355,18 +333,8 @@ In order to turn this feature off:
 
 <figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-
-
-###
-
-###
-
 ### References
 
 * AWS. Cross-zone load balancing. Amazon Web Services. Disponível em: [https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#cross-zone-load-balancing). Acesso em: 9 set. 2023a.
-
-
-
-
 
 [^1]: 
