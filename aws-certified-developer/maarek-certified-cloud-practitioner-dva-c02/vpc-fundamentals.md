@@ -16,7 +16,7 @@
 
 **VPC Diagram**
 
-<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Internet Gateway & NAT Gateways
 
@@ -24,7 +24,7 @@
 * Public Subnets have a **route** to the internet gateway.
 * • NAT Gateways (AWS-managed) & NAT Instances (self-managed) allow your instances in your Private Subnets to access the internet while remaining private.
 
-<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Network ACL & Security Groups
 
@@ -59,7 +59,7 @@
 
 ### VPC Peering
 
-<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Connect two VPC, privately using AWS’ network.
 * Make them behave as if they were in the same network.
@@ -74,7 +74,7 @@
 * VPC Endpoint Interface: the rest.
 * **Note: Only used within your VPC.**
 
-<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Site to Site VPN & Direct Connect
 
@@ -88,7 +88,7 @@
   * Goes over a private network.
   * Takes at least a month to establish.
 
-<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Summary&#x20;
 

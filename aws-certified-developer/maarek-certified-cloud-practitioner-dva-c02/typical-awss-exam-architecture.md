@@ -2,7 +2,7 @@
 
 #### Three Tier Solution Architecture
 
-<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 The 3 Tier Architecture is comprised of three (3)distinct layers. A user accesses an ELB hosted in a public subnet and this interacts with EC2s (Backend) in a private subnet which saves and retrieves information from the Database in the data subnet.
 
