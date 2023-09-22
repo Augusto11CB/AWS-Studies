@@ -30,6 +30,8 @@
   * [VPC Fundamentals](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/vpc-fundamentals.md)
   * [Typical AWS's Exam Architecture](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/typical-awss-exam-architecture.md)
   * [S3](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/s3.md)
+  * [S3 - Advanced](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/s3-advanced.md)
+  * [S3 - Security](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/s3-security.md)
   * [AWS CLI, SDK, IAM Roles and Policies](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-cli-sdk-iam-roles-and-policies.md)
 
 ## AWS CLOUD PRACTITIONER
