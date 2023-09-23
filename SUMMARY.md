@@ -33,6 +33,7 @@
   * [S3 - Advanced](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/s3-advanced.md)
   * [S3 - Security](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/s3-security.md)
   * [AWS CLI, SDK, IAM Roles and Policies](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-cli-sdk-iam-roles-and-policies.md)
+  * [CloudFront](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudfront.md)
 
 ## AWS CLOUD PRACTITIONER
 
