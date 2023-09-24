@@ -18,22 +18,48 @@ To pass other information from the request, such as URL query string, cookies, e
 
 **Example Console Config**
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Origins
 
 * S3 Buckets
   * For distributing files and caching them at the edge.
-  * Enhanced security with CloudFront Origin Access Control (OAC).
+  * Enhanced security with **CloudFront Origin Access Control (OAC)**.
   * OAC is replacing Origin Access identity (OAI).
   * CloudFront can be used as an ingress (to upload files to S3).
 * Custom Origin (HTTP)
   * Application Load Balancer.
   * EC2 instance.
-  * S3 websiter (must first enable the bucket as a static s3 website).
+  * S3 website (must first enable the bucket as a static S3 website).
   * Any HTTP backend you want.
 
+<details>
 
+<summary>Configure OAC when creating a new CloudFront distribution (AWS, 2023c)</summary>
+
+
+
+1. Sign in to the AWS Management Console and open the CloudFront console at [https://console.aws.amazon.com/cloudfront/v3/home](https://console.aws.amazon.com/cloudfront/v3/home)
+2. Choose **Create Distribution**.
+3. In the **Origin** configuration section, select an S3 origin from the **Origin domain** drop-down list.
+4. You can optionally configure an **origin path** to append to the origin domain name for origin requests.
+5. Enter a name to uniquely identify the current origin configuration.
+6. Choose Origin access control settings (or create one).
+
+![](<../../.gitbook/assets/image (7).png>)
+
+![](<../../.gitbook/assets/image (8).png>)
+
+
+
+7. Follow the detailed instructions [here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html) on how to configure the rest of the settings.
+8. Once the distribution is successfully created, you must update the S3 bucket policy, you can reference the policy statement provided on distribution detail page (Figure 3).
+
+<!---->
+
+8. Note that the policy provided only includes permissions to read objects from S3. If you would like to also upload objects to S3, you must update the policy with additional permissions for “_s3:PutObject_”.
+
+</details>
 
 ### CloudFront High Level Diagram
 
@@ -51,12 +77,132 @@ To pass other information from the request, such as URL query string, cookies, e
   * :warning: **Great for static content that must be available everywhere.**
 * S3 Cross Region Replication:
   * Must be setup for each region you want replication to happen.
-    * **VS CloudFront:** Amazon CloudFront does not provide fine-grained control over which specific edge locations cache your content. **When you configure CloudFront, your content is cached across multiple edge locations globally to improve latency and availability for your users**.
+    * **VS CloudFront:** Amazon CloudFront does not provide fine-grained control over which specific edge locations cache your content. **When you configure CloudFront, your content is cached across multiple edge locations globally to improve latency and availability for your users (AWS, 2023b)**.
   * Files are updated in near real-time.
   * ReadOnly.
   * :warning: **Great for dynamic contend that needs to be available at low-latency in few regions.**
 
-### Signed URLs&#x20;
+### CloudFront Caching
+
+* The cache lives at each **CloudFront Edge Location**.
+* CloudFront identifies each object in the cache using the Cache Key.
+* You want to maximize the Cache Hit ratio to minimize requests to the origin.
+* • You can invalidate part of the cache using the CreateInvalidation API.
+
+<figure><img src="../../.gitbook/assets/image (120).png" alt=""><figcaption></figcaption></figure>
+
+#### What is CloudFront Cache Key?
+
+* A unique identifier for every object in the cache.
+* By default, consists of `hostname + resource portion of the URL`.
+* If you have an application that serves up content that varies based on user, device, language, location.
+* You can add other elements (HTTP headers, cookies, query strings) to the Cache Key using CloudFront Cache Policies.
+
+<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption></figcaption></figure>
+
+#### CloudFront Policies – Cache Policy
+
+* Cache based on:
+  * **HTTP Headers:** None or Whitelist.
+  * **Cookies:** None, or Whitelist, or Include All-Except, or All.
+  * **Query Strings:** None, or Whitelist, or Include All-Except, or All.
+* Control the TTL (0 seconds to 1 year), can be set by the origin using the [Cache-Control header](https://www.cloudflare.com/en-gb/learning/cdn/glossary/what-is-cache-control/), **Expires** header...
+  * Note: See [No Cache-Control Header for files from AWS CloudFront with S3 Origin](https://serverfault.com/questions/770302/no-cache-control-header-for-files-from-aws-cloudfront-with-s3-origin).
+* Create your own policy or use Predefined Managed Policies.
+* **All HTTP headers, cookies, and query strings that you include in the Cache Key are automatically included in origin requests.**
+
+### **CloudFront Caching - Cache Policy HTTP Headers**
+
+* None:
+  * Don't include any headers in the Cache Key (Except Default).
+  * Headers are not forwarded (except default).
+  * Best Caching Performance.
+* Whitelist:
+  * Only specified headers included in the Cache Key.
+  * Specified headers are also forwarded to Origin.
+
+<figure><img src="../../.gitbook/assets/image (122).png" alt=""><figcaption></figcaption></figure>
+
+### CloudFront Caching – Cache Policy Query Strings
+
+* **None**
+  * Don’t include any query strings in the Cache Key.
+  * Query strings are not forwarded.
+* **Whitelist**
+  * Only specified query strings included in the Cache Key.
+  * Only specified query strings are forwarded.
+* **Include All-Except**
+  * Include all query strings in the Cache Key except the specified list.
+  * All query strings are forwarded except the specified list.
+* **All**&#x20;
+  * Include all query strings in the Cache Key.
+  * All query strings are forwarded.
+  * Worst caching performance.
+
+<figure><img src="../../.gitbook/assets/image (117).png" alt=""><figcaption></figcaption></figure>
+
+### CloudFront Policies – Origin Request Policy :warning:
+
+* **Specify values that you want to include in origin requests without including them in the Cache Key** (no duplicated cached content).
+* You can include:
+  * HTTP headers: None – Whitelist – All viewer headers options.
+  * Cookies: None – Whitelist – All.
+  * Query Strings: None – Whitelist – All.
+* Ability to add CloudFront HTTP headers and Custom Headers to an origin request that were not included in the viewer request.
+* Create your own policy or use Predefined Managed Policies.
+
+### Cache Policy vs. Origin Request Policy
+
+<figure><img src="../../.gitbook/assets/image (118).png" alt=""><figcaption></figcaption></figure>
+
+### CloudFront - Cache Invalidations
+
+* In case you update the back-end origin, CloudFront doesn’t know about it and will only get the refreshed content after the TTL has expired.
+* However, you can force an entire or partial cache refresh (thus bypassing the TTL) by performing a CloudFront Invalidation.
+*   Example:
+
+    * You can invalidate all files (`*`_) or a special path (`/images/*`_).
+
+
+
+    <figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption></figcaption></figure>
+
+### CloudFront - Cache Behaviors
+
+* Configure different settings for a given URL path pattern.
+* Example: one specific cache behavior to images/\*.jpg files on your origin web server.
+* Route to different kind of origins/origin groups based on the **content type** or **path pattern**:
+  * `/images/*`
+  * `/api/*`
+  * `/*` (default cache behavior).
+* :warning:When adding additional Cache Behaviors, the Default Cache Behavior is always the last to be processed and is always `/*`.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+#### CloudFront - Cache Behaviors - Sign In Page
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+### CloudFront - Maximize cache hits by separating static and dynamic distributions
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+### CloudFront - ALB or EC2 as an origin
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+### CloudFront - Signed URLs&#x20;
+
+* Use Case: You want to distribute paid shared content to premium users over the world.
+* We can use CloudFront Signed URL / Cookie. We attach a policy with:
+  * Includes URL Expiration.
+  * Includes IP ranges to access the data from.
+  * Trusted signers (which AWS accounts can create signed URLs).
+* How long should the URL be valid for?
+  * Shared content (move, music): make it short (a few minute).
+  * Private content (private to the user): you can make it last for years.
+* Signed URL = Access to individuals files (one URL per file).
+* Signed Cookies = access to multiple files (one signed cookie for many files).
 
 #### Proccess for Creating and Using Signed URLs
 
@@ -70,6 +216,14 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
 6. **Policy Confirmation**: If the signature is valid, CloudFront checks the policy statement in the URL (or constructs one for canned policies) to confirm if the request aligns with the specified access parameters, such as time restrictions.
 7. **Content Delivery**: If the request meets the policy requirements, CloudFront proceeds with standard operations. It checks if the file is in the edge cache, forwards the request to the origin if needed, and delivers the file to the user.
 
+#### CloudFront Signed URL Diagram
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+### CloudFront Signed URL vs S3 Pre-Signed URL
+
+
+
 ### CloudFront Geo Restriction
 
 * You can restrict who can access your distribution.
@@ -79,6 +233,24 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
 
 ![](<../../.gitbook/assets/image (116).png>)
 
+### CloudFront - Price Classes
+
+* You can reduce the number of edge locations for **cost reduction.**
+* Three price classes:
+  * Price Class All: all regions – best performance.
+  * Price Class 200: most regions, but excludes the most expensive regions.
+  * Price Class 100: only the least expensive regions.
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
+### CloudFront - Multiple Origin
+
 ### References
 
 AWS. _Controlling origin requests_. Amazon Web Services. Disponível em: <[https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html)>. Acesso em: 22 set. 2023a.
+
+AWS. _How caching works with CloudFront edge locations_. Amazon Web Services. Disponível em: <[https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cache-hit-ratio-explained.html](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cache-hit-ratio-explained.html)>. Acesso em: 24 set. 2023b.
+
+AWS. _Creating a distribution_. Amazon Web Services. Disponível em: <[https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html)>. Acesso em: 24 set. 2023c.
