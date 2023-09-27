@@ -37,7 +37,7 @@
 * They act as a "firewall".
 *   They control how traffic is allowed into or out of our EC2 Instances.
 
-    <figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 * Security groups only contain **allow** rules.
 * Security groups rules can reference by IP or by security group.
 
@@ -51,7 +51,7 @@
 
 
 
-    <figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Good to Know About Security Groups
 

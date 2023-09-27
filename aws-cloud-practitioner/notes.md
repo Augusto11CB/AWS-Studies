@@ -148,7 +148,7 @@ But where can you find authoritative answers? **AWS Artifact**
 * Single consolidated bill
 * SCPs (Service Control Policies)
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
 
 ### AWS Control Tower
 
@@ -202,7 +202,7 @@ Excellent solution if you are:
 
 
 
-    <figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Font: </p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: </p></figcaption></figure>
 
 ### Key Networking Terms
 
@@ -220,7 +220,7 @@ Excellent solution if you are:
     \
 
 
-    <figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
 
 > Usually, the target of an ELB is a public subnet that is auto scaling instances.
 
@@ -232,7 +232,7 @@ AWS’s DNS web service. Route 53 effectively connects user requests to infrastr
 
 Is a Content Delivery Network (CDN).
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
 
 #### AWS Direct Connect
 
@@ -331,7 +331,7 @@ Storage Gateway supports four key hybrid cloud use cases: move backups and archi
 
 #### Database Comparisons
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html">AWS's Page</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html">AWS's Page</a></p></figcaption></figure>
 
 #### AuroraDB
 

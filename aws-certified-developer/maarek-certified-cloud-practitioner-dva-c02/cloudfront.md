@@ -18,7 +18,7 @@ To pass other information from the request, such as URL query string, cookies, e
 
 **Example Console Config**
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Origins
 
@@ -46,9 +46,9 @@ To pass other information from the request, such as URL query string, cookies, e
 5. Enter a name to uniquely identify the current origin configuration.
 6. Choose Origin access control settings (or create one).
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7) (1).png>)
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../.gitbook/assets/image (8) (1).png>)
 
 
 
@@ -177,19 +177,19 @@ To pass other information from the request, such as URL query string, cookies, e
   * `/*` (default cache behavior).
 * :warning:When adding additional Cache Behaviors, the Default Cache Behavior is always the last to be processed and is always `/*`.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CloudFront - Cache Behaviors - Sign In Page
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Maximize cache hits by separating static and dynamic distributions
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - ALB or EC2 as an origin
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Signed URLs&#x20;
 
@@ -218,7 +218,7 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
 
 #### CloudFront Signed URL Diagram
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront Signed URL vs S3 Pre-Signed URL
 
@@ -241,9 +241,9 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
   * Price Class 200: most regions, but excludes the most expensive regions.
   * Price Class 100: only the least expensive regions.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Multiple Origin
 
@@ -253,7 +253,7 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
   * `/api/*`
   * `/*`
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Origin Groups
 
@@ -261,9 +261,9 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
 * Origin Group: one primary and one secondary origin.
 * If the primary origin fails, the second one is used.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 CloudFrount - Field Level Encryption
 
@@ -275,7 +275,7 @@ CloudFrount - Field Level Encryption
   * Specify set of fields in POST requests that you want to be encrypted (up to 10 fields).
   * Specify the public key to encrypt them.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Real Time Logs
 
@@ -285,7 +285,7 @@ CloudFrount - Field Level Encryption
   * Sampling Rate – percentage of requests for which you want to receive.
   * Specific fields and specific Cache Behaviors (path patterns).
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 
 
