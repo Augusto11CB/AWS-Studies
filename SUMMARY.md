@@ -9,6 +9,7 @@
 * [Identity and Access Management - IAM](aws-identity-access-management-iam.md)
 * [AWS Lambda](aws-lambda.md)
 * [AWS CodeXYZ](aws-codexyz.md)
+* [HTTP 403 Forbidden error when connecting to API Gateway APIs from a VPC](http-403-forbidden-error-when-connecting-to-api-gateway-apis-from-a-vpc.md)
 * [Architecting on AWS](architecting-on-aws-course-annotations/README.md)
   * [Module 1 - Basic Architecture Concepts - Table of contents](architecting-on-aws-course-annotations/module-1-basic-arc-concepts.md)
   * [Module 2 - Account Security](architecting-on-aws-course-annotations/module-2-account-security.md)
