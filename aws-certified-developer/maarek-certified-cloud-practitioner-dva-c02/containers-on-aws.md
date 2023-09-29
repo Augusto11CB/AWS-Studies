@@ -16,9 +16,9 @@
 
 Launch Types: Farget, EC2
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - EC2 Launch Type
 
@@ -27,7 +27,7 @@ Launch Types: Farget, EC2
 * **Each EC2** Instance must **run the ECS Agent** to register in the ECS Cluster.
 * AWS takes care of starting / stopping containers.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Fargate Launch Type
 
@@ -37,7 +37,7 @@ Launch Types: Farget, EC2
 * AWS runs ECS Tasks based on CPU/RAM needed.
 * To scale, just increase the number of tasks. Simple - no more EC2 instances.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - IAM Roles for ECS
 
@@ -53,7 +53,7 @@ Launch Types: Farget, EC2
   * Task Role is defined in the task definition.
 * [Task Role vs. Task Execution Role](https://www.youtube.com/shorts/VQfRQ9gGYD4)
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Load Balancer Integrations
 
@@ -61,7 +61,7 @@ Launch Types: Farget, EC2
 * Network Load Balancer recommended only for high throughput / high performance use cases, or to pair it with AWS Private Link.
 * :thumbsdown: Classic Load Balancer supported but **not recommended** (no advanced features – no Fargate)
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Data Volumes (EFS)
 
@@ -71,7 +71,7 @@ Launch Types: Farget, EC2
 * **Fargate + EFS = Serverless.**
 * Use cases: persistent multi-AZ shared storage for your containers.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### ECS Service Auto Scaling
 
@@ -80,7 +80,7 @@ Launch Types: Farget, EC2
   * ECS Service Average Memory Utilization - Scale on RAM.
   * :thumbsup:ALB Request Count Per Target – metric coming from the ALB.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Font: TBD</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Font: BUENO, 2023</p></figcaption></figure>
 
 * **Target Tracking** - scale based on target value for a specific CloudWatch metric.
 * **Step Scaling** - scale based on a specified CloudWatch Alarm.
@@ -127,16 +127,61 @@ Launch Types: Farget, EC2
   * min healthy percent: 100 and Max healthy percent: 200
     * ![](<../../.gitbook/assets/image (17).png>)
 
+#### ECS tasks invoked by Event Bridge
 
+Use Case 1:
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+Use Case 2 - Schedule:&#x20;
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### Amazon ECS - Task Definitions
+
+* Task definitions are metadata in JSON form to tell ECS how to run a Docker Container.
+* It contains crucial information, such as:
+  * Image name.
+  * Port binding for container and host.
+  * Memory and CPU required.
+  * Environment variables.
+  * Networking information.
+  * IAM Role.
+  * Logging configuration (ex: CloudWatch).
+* Can define up to 10 containers in a Task Definition.
+
+#### Amazon ECS - One IAM Role per Task Definition
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Load Balancing (EC2 Launch Type)
 
-* You must allow on the EC2 instance’s Security Group any port from the ALB’s Security Group:
-  * :exclamation::exclamation::warning: My understanding: &#x20;
-    * EC2s holds docker containers.
-    * Docker containers are inside EC2. Althout the request are for the Docker container because it "lives" inside an EC2, so you need to set up permissions for the ALB to access the EC2 (that runs your container) to establish comunication. You set this permission in the Security Group of the EC2 instances working as capacity providers.
+* If **only** the **container port** in the task definition, a port in the host will be dynamic mapped.
+* Although there is this dynamic port allocation, the ALB can find the right port on your EC2 Instances.
+* In order for what was described above to work, you must allow on the **EC2** instance’s **Security Group** **any port from the ALB’s Security Group**:
+  *   :exclamation::exclamation::warning: My understanding: &#x20;
 
+      * EC2s holds docker containers.
 
+      > Docker containers are inside EC2. Although the requests are for the Docker container because it "lives" inside an EC2, you need to set permissions for the ALB to access the EC2 running your container to establish communication. You set this permission in the security group of the EC2 instances acting as capacity providers (BUENO, 2023).
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### Amazon ECS - Load Balancing (Fargate Launch Type)
+
+* Each task has a unique private IP.
+* **Only define the container port** (host port is not applicable).
+* Example:
+  * ECS ENI Security Group:
+    * Allow port 80 from the ALB.
+  * ALB Security Group:
+    * Allow port 80/443 from web.
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### References
 

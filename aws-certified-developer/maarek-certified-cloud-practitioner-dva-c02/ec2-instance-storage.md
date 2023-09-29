@@ -20,7 +20,7 @@
 
 #### EBS - Delete on Termination Attribuite
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Controls the EBS behaviour when an EC2 instance terminates:
   * By default, the root EBS volume is deleted (attribute enabled).
