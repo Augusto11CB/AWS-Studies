@@ -42,7 +42,7 @@
   * Easy to change records.
 * Note: Except for alias records, TTL is mandatory for each DNS record.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Route 53 - CNAME vs Alias
 

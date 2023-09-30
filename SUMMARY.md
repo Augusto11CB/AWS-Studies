@@ -35,8 +35,9 @@
   * [S3 - Security](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/s3-security.md)
   * [AWS CLI, SDK, IAM Roles and Policies](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-cli-sdk-iam-roles-and-policies.md)
   * [CloudFront](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudfront.md)
-  * [Kinesis](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/kinesis.md)
   * [Containers on AWS](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/containers-on-aws.md)
+  * [Elastic Beanstalk](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/elastic-beanstalk.md)
+  * [Kinesis](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/kinesis.md)
   * [CloudWatch](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudwatch.md)
 
 ## AWS CLOUD PRACTITIONER

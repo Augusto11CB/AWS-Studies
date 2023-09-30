@@ -16,9 +16,9 @@
 
 Launch Types: Farget, EC2
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - EC2 Launch Type
 
@@ -27,7 +27,7 @@ Launch Types: Farget, EC2
 * **Each EC2** Instance must **run the ECS Agent** to register in the ECS Cluster.
 * AWS takes care of starting / stopping containers.
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Fargate Launch Type
 
@@ -37,7 +37,7 @@ Launch Types: Farget, EC2
 * AWS runs ECS Tasks based on CPU/RAM needed.
 * To scale, just increase the number of tasks. Simple - no more EC2 instances.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - IAM Roles for ECS
 
@@ -53,7 +53,7 @@ Launch Types: Farget, EC2
   * Task Role is defined in the task definition.
 * [Task Role vs. Task Execution Role](https://www.youtube.com/shorts/VQfRQ9gGYD4)
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Load Balancer Integrations
 
@@ -61,7 +61,7 @@ Launch Types: Farget, EC2
 * Network Load Balancer recommended only for high throughput / high performance use cases, or to pair it with AWS Private Link.
 * :thumbsdown: Classic Load Balancer supported but **not recommended** (no advanced features – no Fargate)
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Data Volumes (EFS)
 
@@ -71,7 +71,7 @@ Launch Types: Farget, EC2
 * **Fargate + EFS = Serverless.**
 * Use cases: persistent multi-AZ shared storage for your containers.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### ECS Service Auto Scaling
 
@@ -80,7 +80,7 @@ Launch Types: Farget, EC2
   * ECS Service Average Memory Utilization - Scale on RAM.
   * :thumbsup:ALB Request Count Per Target – metric coming from the ALB.
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>Font: BUENO, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>Font: BUENO, 2023</p></figcaption></figure>
 
 * **Target Tracking** - scale based on target value for a specific CloudWatch metric.
 * **Step Scaling** - scale based on a specified CloudWatch Alarm.
@@ -135,11 +135,11 @@ Use Case 1:
 
 Use Case 2 - Schedule:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Task Definitions
 
@@ -156,7 +156,7 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
 
 #### Amazon ECS - One IAM Role per Task Definition
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Load Balancing (EC2 Launch Type)
 
@@ -169,7 +169,7 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
 
       > Docker containers are inside EC2. Although the requests are for the Docker container because it "lives" inside an EC2, you need to set permissions for the ALB to access the EC2 running your container to establish communication. You set this permission in the security group of the EC2 instances acting as capacity providers (BUENO, 2023).
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Load Balancing (Fargate Launch Type)
 
@@ -181,7 +181,7 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
   * ALB Security Group:
     * Allow port 80/443 from web.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Environment Variables
 
@@ -191,7 +191,7 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
   * Secrets Manager - sensitive variables 9e.g., DB passwords).
 * Environment Files (bulk) - Amazon S3.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Data Volumes (Bind Mounts)
 
@@ -206,7 +206,7 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
   * Share ephemeral data between multiple containers.
   * “Sidecar” container pattern, where the “sidecar” container used to send metrics/logs to other destinations (separation of conerns).
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Tasks Placement
 
@@ -217,7 +217,7 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
   * **Task Placement Strategy.**
   * **Task Placement Constraints.**
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Tasks Placement Process
 
@@ -260,7 +260,7 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **Mixed Strategies**
 
@@ -306,9 +306,9 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
 
 **Console Config Example**
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: BUENO, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Font: BUENO, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Font: BUENO, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Font: BUENO, 2023</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Font: BUENO, 2023</p></figcaption></figure>
 
