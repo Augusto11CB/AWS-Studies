@@ -22,6 +22,7 @@
 
 * [AWS Certified Developer](aws-certified-developer/aws-certified-developer.md)
 * [MAAREK Certified Cloud Practitioner DVA-C02](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/README.md)
+  * [Content](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/content.md)
   * [IAM and AWS CLI](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/iam-and-aws-cli.md)
   * [EC2 Fundamentals](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ec2-fundamentals.md)
   * [EC2 Instance Storage](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ec2-instance-storage.md)
@@ -39,6 +40,7 @@
   * [Elastic Beanstalk](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/elastic-beanstalk.md)
   * [Kinesis](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/kinesis.md)
   * [CloudWatch](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudwatch.md)
+  * [CI/CD - CodeCoomit, CodePipeline, CodeBuild, CodeDeploy and CodeStar](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ci-cd-codecoomit-codepipeline-codebuild-codedeploy-and-codestar.md)
 
 ## AWS CLOUD PRACTITIONER
 

@@ -19,7 +19,7 @@
   * Worker Environment Tier: This tier is used for applications that need to handle background-processing tasks. This tier do not run web server processes.
     * [This tier can be used to offload long-running processes from your web tier. The tiers communicate with each other via SQS. When your web instance needs to spawn a background job, it posts a message to the shared queue with the job details](https://stackoverflow.com/questions/43302799/what-are-the-difference-between-worker-tier-and-web-tier-in-aws-beanstalk).
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 ### Elastic Beanstalk  Supported Platforms
 
@@ -28,7 +28,7 @@
 
 ### Elastic Beanstalk - Deployment Modes
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Elastic Beanstalk - Deployment Options for Updates
 
@@ -43,12 +43,12 @@
     * :warning: Route 53 can be setup using weighted policies to redirect a little bit of traffic to the stage environment.
     * Using Beanstalk, “swap URLs” when done with the environment test.
 
-    <figure><img src="../../.gitbook/assets/image (2).png" alt="" width="263"><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="263"><figcaption></figcaption></figure>
 * Traffic Splitting: canary testing – send a small % of traffic to new deployment.
 
 The following table compares deployment method properties:
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
 
 ### Elastic Beanstalk CLI
 
@@ -96,7 +96,7 @@ We can install an additional CLI called the “EB cli” which makes working wit
   * deploy your application onto the new environment.
   * perform a CNAME swap or Route 53 update.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Elastic Beanstalk -  RDS
 
@@ -104,7 +104,7 @@ We can install an additional CLI called the “EB cli” which makes working wit
 * This is not great for prod as the database lifecycle is tied to the Beanstalk environment lifecycle.
 * The best for prod is to separately create an RDS database and provide our EB application with the connection string.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Elastic Beanstalk -  Migration RDS
 
@@ -115,7 +115,7 @@ We can install an additional CLI called the “EB cli” which makes working wit
 * Terminate the old environment (RDS won’t be deleted).
 * Delete CloudFormation stack (in DELETE\_FAILED state).
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
