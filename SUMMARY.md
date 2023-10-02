@@ -38,6 +38,7 @@
   * [CloudFront](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudfront.md)
   * [Containers on AWS](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/containers-on-aws.md)
   * [Elastic Beanstalk](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/elastic-beanstalk.md)
+  * [CloudFormation](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudformation.md)
   * [Kinesis](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/kinesis.md)
   * [CloudWatch](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudwatch.md)
   * [CI/CD - CodeCoomit, CodePipeline, CodeBuild, CodeDeploy and CodeStar](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ci-cd-codecoomit-codepipeline-codebuild-codedeploy-and-codestar.md)
