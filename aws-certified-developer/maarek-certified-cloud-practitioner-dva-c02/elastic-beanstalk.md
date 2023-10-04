@@ -28,7 +28,7 @@
 
 ### Elastic Beanstalk - Deployment Modes
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Elastic Beanstalk - Deployment Options for Updates
 
@@ -43,12 +43,12 @@
     * :warning: Route 53 can be setup using weighted policies to redirect a little bit of traffic to the stage environment.
     * Using Beanstalk, “swap URLs” when done with the environment test.
 
-    <figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="263"><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="263"><figcaption></figcaption></figure>
 * Traffic Splitting: canary testing – send a small % of traffic to new deployment.
 
 The following table compares deployment method properties:
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
 
 ### Elastic Beanstalk CLI
 

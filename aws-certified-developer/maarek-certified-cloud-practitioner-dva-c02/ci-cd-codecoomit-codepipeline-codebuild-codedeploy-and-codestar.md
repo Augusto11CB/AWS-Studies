@@ -5,9 +5,9 @@
 * [AWS CodeDeploy](https://aws.amazon.com/codedeploy/): A fully managed deployment (**continuous deployment**) service that automates software deployments to a variety of compute services such as Amazon EC2, [AWS Fargate](https://aws.amazon.com/fargate/), [AWS Lambda](http://aws.amazon.com/lambda), and your on-premises servers.
 * [AWS CodePipeline](https://aws.amazon.com/codepipeline/): A fully managed [**continuous delivery**](https://aws.amazon.com/devops/continuous-delivery/) service that helps you automate your release pipelines for fast and reliable application and infrastructure updates.&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: <a href="https://www.youtube.com/@TinyTechnicalTutorials">Tiny Technical Tutorials</a>, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: <a href="https://www.youtube.com/@TinyTechnicalTutorials">Tiny Technical Tutorials</a>, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### CodeCommit
 
@@ -26,7 +26,7 @@
   * :warning: Repositories are automatically encrypted at rest using AWS KMS.
   * Encrypted in transit (can only use HTTPS or SSH – both secure).
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### CodePipeline
 
@@ -41,7 +41,7 @@
 
 
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
