@@ -7,7 +7,7 @@
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: <a href="https://www.youtube.com/@TinyTechnicalTutorials">Tiny Technical Tutorials</a>, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### CodeCommit
 
@@ -26,7 +26,7 @@
   * :warning: Repositories are automatically encrypted at rest using AWS KMS.
   * Encrypted in transit (can only use HTTPS or SSH – both secure).
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### CodePipeline
 

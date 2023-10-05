@@ -148,7 +148,7 @@ But where can you find authoritative answers? **AWS Artifact**
 * Single consolidated bill
 * SCPs (Service Control Policies)
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
 
 ### AWS Control Tower
 
@@ -202,7 +202,7 @@ Excellent solution if you are:
 
 
 
-    <figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: </p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: </p></figcaption></figure>
 
 ### Key Networking Terms
 
