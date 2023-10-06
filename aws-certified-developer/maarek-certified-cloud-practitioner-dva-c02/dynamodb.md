@@ -31,7 +31,7 @@
 * Partition key must be unique for each item.
 * Partition key must be “diverse” so that the data is distributed.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Partition Key + Sort Key (HASH + RANGE)
 
@@ -39,7 +39,7 @@
 * Data is grouped by partition key.
 * Example: users-games table, “User\_ID” for Partition Key and “Game\_ID” for Sort Key.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Read/Write Capacity Modes
 
@@ -56,6 +56,14 @@ Note: You can switch between different modes once every 24 hours.
 * Throughput can be exceeded temporarily using “**Burst Capacity**”.
   * If Burst Capacity has been consumed, you’ll get a `ProvisionedThroughputExceededException`.
   * It’s then advised to do an exponential backoff retry.
+
+**Console - Provisioned Mode With Auto Scaling Enabled**
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+**Console - Provisioned Mode With Auto Scaling Disabled**
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 #### On-Demand Mode
 
