@@ -6,7 +6,7 @@
   * CodePipeline can be used to create an end-to-end pipeline that **fetches the application code from CodeCommit**, _builds and tests using CodeBuild_, **and finally deploys using CodeDeploy.**
 * AWS CodeStar
 
-<figure><img src=".gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://www.youtube.com/@TinyTechnicalTutorials">Tiny Technical Tutorials</a>, 2023</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://www.youtube.com/@TinyTechnicalTutorials">Tiny Technical Tutorials</a>, 2023</p></figcaption></figure>
 
 <figure><img src=".gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://www.youtube.com/@TinyTechnicalTutorials">Tiny Technical Tutorials</a>, 2023</p></figcaption></figure>
 

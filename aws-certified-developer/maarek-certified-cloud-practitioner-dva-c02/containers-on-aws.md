@@ -37,7 +37,7 @@ Launch Types: Farget, EC2
 * AWS runs ECS Tasks based on CPU/RAM needed.
 * To scale, just increase the number of tasks. Simple - no more EC2 instances.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - IAM Roles for ECS
 
@@ -53,7 +53,7 @@ Launch Types: Farget, EC2
   * Task Role is defined in the task definition.
 * [Task Role vs. Task Execution Role](https://www.youtube.com/shorts/VQfRQ9gGYD4)
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Load Balancer Integrations
 
@@ -61,7 +61,7 @@ Launch Types: Farget, EC2
 * Network Load Balancer recommended only for high throughput / high performance use cases, or to pair it with AWS Private Link.
 * :thumbsdown: Classic Load Balancer supported but **not recommended** (no advanced features – no Fargate)
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Data Volumes (EFS)
 
@@ -135,11 +135,11 @@ Use Case 1:
 
 Use Case 2 - Schedule:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Task Definitions
 
@@ -206,7 +206,7 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
   * Share ephemeral data between multiple containers.
   * “Sidecar” container pattern, where the “sidecar” container used to send metrics/logs to other destinations (separation of conerns).
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Tasks Placement
 
@@ -217,7 +217,7 @@ Use Case 3 - Intercept Stopped Tasks using EventBridge:&#x20;
   * **Task Placement Strategy.**
   * **Task Placement Constraints.**
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Amazon ECS - Tasks Placement Process
 
