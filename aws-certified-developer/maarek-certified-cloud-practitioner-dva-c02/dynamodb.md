@@ -59,11 +59,11 @@ Note: You can switch between different modes once every 24 hours.
 
 **Console - Provisioned Mode With Auto Scaling Enabled**
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Console - Provisioned Mode With Auto Scaling Disabled**
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### On-Demand Mode
 
@@ -84,7 +84,7 @@ Note: You can switch between different modes once every 24 hours.
 * One Write Capacity Unit (WCU) represents one write per second for an item up to 1 KB in size.
 * If the items are larger than 1 KB, more WCUs are consumed.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB Strongly Consistent Read vs. Eventually Consistent Read.
 
@@ -100,7 +100,7 @@ Note: You can switch between different modes once every 24 hours.
 * One Read Capacity Unit (RCU) represents one Strongly Consistent Read (SCR) per second, or two Eventually Consistent Reads (ECR) per second, for an item up to 4 KB in size.
 * If the items are larger than 4 KB, more RCUs are consumed.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Calculation involving Eventually Consistent Reads: ECR/2 \* ItemSize/4KB.
 * Calculation involving Strongly Consistent Read: SCR \* ItemSize/4KB
@@ -114,13 +114,321 @@ Note: You can switch between different modes once every 24 hours.
 * :warning: :warning: :warning: :warning: :warning: :warning: If you have 10 partitions, and you provide a new provision with 10 **WCUs** and 10 **RCUs**, then they're going to be spread evenly across partitions.
   * The even distribution of capacity ensures that the workload is spread across the partitions, preventing hotspots where certain partitions become overloaded with requests while others remain underutilized. DynamoDB's automatic partition management takes care of distributing the data and load balancing the requests to provide optimal performance and scalability.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Throttling
 
 * If we exceed provisioned RCUs or WCUs, we get "ProvisionedThroughputExceeded Exception.
-* Reasons:
+* **Reasons:**
   * Hot Keys (e.g., popular item).
   * Hot partitions.
   * Very Large items.
-*
+* **Solutions:**
+  * Exponential Backoff
+  * Distribute Partition Keys as much as possible
+  * if RCU issue, we can youse DynamoDB Accelarator (DAX).
+
+### DynamoDB - Writing Data
+
+* PutItem:
+  * Creates a new item or fully replace an old item (same Primary Key).
+  * Consumes WCUs.
+* UpdateItem:
+  * Edits an existing item’s attributes or adds a new item if it doesn’t exist.
+  * Can be used to implement **Atomic Counters** – a numeric attribute that’s unconditionally incremented.
+* Conditional Writes:
+  * Accept a write/update/delete only if conditions are met, otherwise returns an error.
+  * Helps with concurrent access to items.
+
+### DynamoDB - Reading Data
+
+* GetItem
+  * Read based on primary key.
+  * Primary key can be HASH or HASH+RANGE.
+  * Eventually Consistent Read (default).
+  * Option to use Strongly Consistent Reads (more RCU - might take longer).
+  * ProjectionExpression can be specified to retrieve only certain attributes.
+
+### DynamoDB - Reading Data (Query)
+
+* Query returns items based on:
+  * KeyConditionsExpressions
+    * Partition Key Value (must be = operator) - required.
+    * Sort Key value (=, <, <=, >, >=, Between, Begins with) - optional.
+* Returns:
+  * The number of items specified in **limit**.
+  * **or up to 1 MB of data**.
+* Ability to do pagination on the results.
+* Can query table, a local secondary index, or a Global Secondary Index.
+
+### DynamoDB - Reading Data (Scan)
+
+* **Scan the entire table** and then filter out data (inefficient).
+* Returns up to I MB of data - use pagination to keep on reading.
+* :warning: Consumes a lot of RCU.
+* Limit impact using Limit or reduce the size of the result and pause.
+* For faster performance, use Parallel Scan.
+  * Multiple workers scan multiple data segments at the same time.
+  * Increases the throughput and RCU consumed.
+  * Limit the impact of parallel scans just like you would for Scans.
+* Can use ProjectionExpression & FilterExpression ( :warning: **no changes to RCU**).&#x20;
+
+### DynamoDB - Deleting Data (Scan)
+
+* DeleteItem
+  * Delete an Individual item.
+  * ability to perform a conditional delete.
+* DeleteTable
+  * Delete a whole table and all its items.
+  * Much quicker deletion than calling DeleteItem on all Items.
+
+### DynamoDB - Batch Operations (Scan)
+
+* Allows you to **save in latency by reducing the number of API calls**.
+* Operations are done in parallel for better efficiency.
+* Part of a batch can fail; in which case we need to try again for the failed items.
+* **BatchWriteItem**
+  * Up to 25 PutItem and/or DeleteItem in one call.
+  * Up to 16 MB of data written, up to 400KB of data per item.
+  * Can't update iteams (use UpdateItem).
+  * :warning: **UnprocessedItems** for failed write operations (exponential backoff or add WCU).
+    * If there are items that couldn't be written, typically due to insufficient write capacity, you'll receive something known as UnprocessedItems. **You can then retry writing the items contained within UnprocessedItems.**
+    * :warning:If you're consistently encountering UnprocessedItems and experiencing scaling issues, **it's advisable to increase your write capacity units.** This will enhance the efficiency of your batch operations.
+* **BatchGetItem**
+  * Return items from one or more tables.
+  * Up to 100 items, up to 16 MB of data.
+  * Items are retrieved in parallel to minimize latency.
+  * UnprocessedKeys for failed read operations (exponential backoff or add RCU).]
+
+### DynamoDB - PartiQL
+
+PartiQL is a SQL-compatible query language for DynamoDB that allows one to perform operations such as select, insert, update, and delete data. It enables the running of queries across multiple DynamoDB tables. One can execute PartiQL queries from various platforms including the AWS Management Console, NoSQL Workbench for DynamoDB, DynamoDB APIs, AWS CLI, and AWS SDK.
+
+### DynamoDB - Conditional Writes
+
+* For PutItem, UpdateItem, DeleteItem, and BatchWriteItem.
+* You can specify a Condition expression to determine which items should be modified:
+  * attribute\_exists
+  * attribute\_not\_exists
+  * attribute\_type
+  * contains (for string)
+  * begins\_with (for string)
+  * ProductCategory IN (:cat1, :cat2) and Price between :low and :high
+  * size (string length)
+
+:warning:Note: **Filter Expression** filters the results of **read queries**, while **Condition Expressions** are for **write operations.**
+
+
+
+**Example: Update Item**
+
+<figure><img src="../../.gitbook/assets/image (135).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+**Example: Delete Item**
+
+<figure><img src="../../.gitbook/assets/image (136).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+**Example: String Comparisons**
+
+<figure><img src="../../.gitbook/assets/image (137).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### Do Not Overwrite Elements While Performing Writing Operation
+
+* `attribute_not_exists(partition_key)`: Make sure the item isn’t overwritten.
+* `attribute_not_exists(partition_key) and attribute_not_exists(sort_key)` :
+  * Make sure the partition / sort key combination is not overwritten.
+
+### DynamoDB - Global Secondary Index (GSI)
+
+* An alternative Primary Key (HASH or HASH+RANGE) is derived from the base table.
+* Queries on non-key attributes are accelerated.
+* The Index Key is composed of scalar attributes (String, Number, or Binary).
+* Attribute Projections can include some or all the attributes of the base table (KEYS\_ONLY, INCLUDE, ALL).
+* RCUs & WCUs must be provisioned for the index.
+* The index can be added or modified after the table has been created.
+
+#### Use Case Example (Be a Better Dev, 2019b)
+
+* Given the table below:
+  *
+
+      <figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption><p>Font: Be a Better Dev, 2019b</p></figcaption></figure>
+  * Give me all the rows where: `OriginCountry == "Germany"`
+  * **Not Ideal Approach:**
+    * Scan + FilterExpression("OriginCountry == "Germany").
+    * This approach is going to check each one of the rows in this DynamoDB table and it will verify if the if OriginCountry == "Germany".
+    * This approach is not scalable when your table has millions of rows.
+  * **GSI Approach:**
+    * Make a GSI of OriginCountry.
+    * Feach "Germany" with one lookup.
+
+{% code overflow="wrap" %}
+```java
+DynamoDBQueryExpression<Account> q = new DynamoDBQueryExpression<Account>()
+.withHashKeyValues(account)
+.withIndexName("OriginCountry")
+.withLimit(resultLimit);
+```
+{% endcode %}
+
+#### How Does GSI Work?
+
+* You as a user define a GSI Index - This involves selecting a new Partition Key.
+* :warning: :warning:  Creating a GSI **CLONES** your primary table using your new Partition Key, but keeps these two tables in sync.
+
+<figure><img src="../../.gitbook/assets/image (143).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (145).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (147).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+
+
+<figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (139).png" alt=""><figcaption><p>Font: Be a Better Dev, 2019b</p></figcaption></figure>
+
+* GSI Partition Key Requires Uniform Data Distribution.
+* :warning::warning: Define RCU/WCU Capacity separately on the index.
+* Throttling.
+
+#### Main Points About GSI to Keep in Mind (Be a Better Dev, 2019b)
+
+* Writes to the main table result in a write to the GSI, effectively doubling the cost of writing.
+* Writes to the main table are eventually replicated on the GSI (usually very quickly, but no guaranteed SLA).
+* Race conditions due to eventual consistency - your GSI can potentially return stale data.
+* Keep your WCU capacoty on your GSI tables >= the WCU capacity on your main table
+
+### DynamoDB - Local Secondary Index (LSI)
+
+* An alternative Sort Key for the table is provided, which shares the same Partition Key as the base table.
+* The Sort Key is composed of a single scalar attribute (String, Number, or Binary).
+* A maximum of 5 Local Secondary Indexes per table is allowed.
+* The definition of these indexes must occur at the time of table creation.
+* Attribute Projections can include some or all the attributes of the base table (KEYS\_ONLY, INCLUDE, ALL).
+
+### DynamoDB - Optimistic Locking
+
+DynamoDB's Optimistic Locking is a strategy that ensures the item you are updating (or deleting) is the same as the item in Amazon DynamoDB. This strategy protects your database writes from being overwritten by the writes of others, and vice versa¹.
+
+Here's how it works:
+
+* Each item has an attribute that acts as a version number.
+* When you retrieve an item from a table, the application records the version number of that item.
+* You can update the item, but only if the version number on the server side has not changed.
+* If there is a version mismatch, it means that someone else has modified the item before you did.
+* The update attempt fails because you have a stale version of the item.
+* If this happens, you simply try again by retrieving the item and then trying to update it.
+
+***
+
+* Accidental overwriting of changes made by others is prevented by optimistic locking, and it also safeguards against others inadvertently overwriting your changes.
+* The @DynamoDBVersionAttribute annotation, provided by the AWS SDK for Java, supports optimistic locking.
+* One property is designated in the mapping class for your table to store the version number, and this property is marked using this annotation.
+* An attribute that stores the version number will be present in the corresponding item in the DynamoDB table when an object is saved.
+* A version number is assigned by the DynamoDBMapper when you first save the object, and this version number is automatically incremented each time the item is updated.
+* Only when the client-side object version matches the corresponding version number of the item in the DynamoDB table do your update or delete requests succeed.
+* A ConditionalCheckFailedException is thrown if there’s a mismatch.
+
+<figure><img src="../../.gitbook/assets/image (149).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+### DynamoDB Accelerator (DAX)
+
+* DynamoDB Accelerator (DAX) is a fully-managed, highly available, seamless in-memory cache for DynamoDB.
+* It offers microseconds latency for cached reads and queries.
+* There’s no need for application logic modification as it’s compatible with existing DynamoDB APIs.
+* It addresses the “Hot Key” problem, which occurs when there are too many reads.
+  * :warning::warning::warning:**The hot key problems are addressed by DAX. Throttling on your RCU's may occur if a very specific key or item is read too many times. However, this problem is mitigated if the item is cached by DAX.**
+* The Time to Live (TTL) for cache is 5 minutes by default.
+  * Custom TTL -> Parameter Group
+  *
+
+      <figure><img src="../../.gitbook/assets/image (153).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+  *
+
+      <figure><img src="../../.gitbook/assets/image (154).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+  *
+
+      <figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+* The cluster can have up to 10 nodes.
+* For production, a minimum of 3 nodes is recommended for Multi-AZ deployment.
+* It ensures security with features like Encryption at rest with KMS, VPC, IAM, and CloudTrail.
+
+<figure><img src="../../.gitbook/assets/image (150).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (152).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+### DAX vs. ElastiCache
+
+DAX is a caching service provided by Amazon for DynamoDB, a NoSQL database. When using DAX, you can create a cache for individual objects or for your queries or scans. This caching feature is very useful for simple types of queries where you can store the results and avoid the need to perform the same computation every time.
+
+However, in more complex scenarios where you have logic applications, such as performing scans, calculating sums, and filtering data, repeatedly executing these operations can be computationally expensive. To optimize performance, you can leverage Amazon ElastiCache.
+
+ElastiCache is an in-memory data store provided by Amazon that supports popular caching engines such as Redis or Memcached. Instead of re-querying DAX and re-performing the aggregation on the client side, you can store the results of your application's operations in ElastiCache. This means that you can retrieve the data directly from ElastiCache, avoiding the need for repetitive and costly computations.
+
+In summary, combining DAX and ElastiCache in your architecture allows you to benefit from DAX's caching capabilities for simple queries and leverage ElastiCache for more complex logic applications, reducing computational expenses and improving performance.
+
+<figure><img src="../../.gitbook/assets/image (151).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+### DynamoDB Stream
+
+* An ordered stream of item-level modifications (create/update/delete) in a table is provided.
+* Stream records have the capability to be:
+  * Dispatched to Kinesis Data Streams
+  * Accessed by AWS Lambda
+  * Read by Kinesis Client Library applications
+* Data can be retained for a duration of up to 24 hours.
+* The use cases encompass:
+  * Real-time reactions to changes (such as sending a welcome email to users)
+  * Analytics
+  * Insertion into derivative tables
+  * Insertion into OpenSearch Service
+  * Implementation of cross-region replication
+
+#### Example - Architecture Diagram
+
+* DynamoDB Streams captures create, update, and delete operations on a table.
+* (1) Kinesis Data Streams can receive the DynamoDB stream.
+  * Kinesis Data Firehose can process the stream and send it to various destinations.
+  * Amazon Redshift can be used for analytics queries on the DynamoDB data.
+  * Amazon S3 can be used for archival of the stream's changes.
+  * OpenSearch Service can index the data and enable search capabilities on the DynamoDB table.
+  * Note: AWS manages most of the components in this architecture.
+* (2) Custom logic can be added using a processing layer, such as a Kinesis Client Library App or a Lambda function.
+  * Custom logic can include messaging, notifications using Amazon SNS, filtering, transformation, and reinserting data into DynamoDB, or sending data to OpenSearch using Lambda.
+
+<figure><img src="../../.gitbook/assets/image (156).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### DynamoDB Streams - Selective Data, Shards, and Stream Population
+
+* The information to be written to the stream can be selected:
+  * KEYS\_ONLY – Only the key attributes of the modified item are included.
+  * NEW\_IMAGE – The entire item, as it appears after modification, is included.
+  * OLD\_IMAGE – The entire item, as it appeared before modification, is included.
+  * NEW\_AND\_OLD\_IMAGES – Both the new and old images of the item are included.
+* DynamoDB Streams are composed of shards, similar to Kinesis Data Streams.
+* Shards are not provisioned by you; this process is automated by AWS.
+* After enabling a stream, records are not populated retroactively.
+
+<figure><img src="../../.gitbook/assets/image (158).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+#### DynamoDB Streams & AWS Lambda
+
+* An Event Source Mapping needs to be defined to read from DynamoDB Streams.
+* The appropriate permissions must be ensured for the Lambda function.
+* The Lambda function is invoked synchronously.
+
+<figure><img src="../../.gitbook/assets/image (157).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+### References
+
+Be a Better Dev. _What is a DynamoDB GSI (Global Secondary Index)_. \[Videoaula]. YouTube, 2019b. Disponível em: <[https://www.youtube.com/watch?v=ihMOlb8EZKE](https://www.youtube.com/watch?v=ihMOlb8EZKE)>. Acesso em: 8 out. 2023.
+
+
+
+
+
+
+
