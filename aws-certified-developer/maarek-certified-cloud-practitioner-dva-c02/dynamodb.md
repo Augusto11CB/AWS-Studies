@@ -31,7 +31,7 @@
 * Partition key must be unique for each item.
 * Partition key must be “diverse” so that the data is distributed.
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Partition Key + Sort Key (HASH + RANGE)
 
@@ -39,7 +39,7 @@
 * Data is grouped by partition key.
 * Example: users-games table, “User\_ID” for Partition Key and “Game\_ID” for Sort Key.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Read/Write Capacity Modes
 
@@ -59,11 +59,11 @@ Note: You can switch between different modes once every 24 hours.
 
 **Console - Provisioned Mode With Auto Scaling Enabled**
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Console - Provisioned Mode With Auto Scaling Disabled**
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### On-Demand Mode
 
@@ -84,7 +84,7 @@ Note: You can switch between different modes once every 24 hours.
 * One Write Capacity Unit (WCU) represents one write per second for an item up to 1 KB in size.
 * If the items are larger than 1 KB, more WCUs are consumed.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB Strongly Consistent Read vs. Eventually Consistent Read.
 
@@ -100,7 +100,7 @@ Note: You can switch between different modes once every 24 hours.
 * One Read Capacity Unit (RCU) represents one Strongly Consistent Read (SCR) per second, or two Eventually Consistent Reads (ECR) per second, for an item up to 4 KB in size.
 * If the items are larger than 4 KB, more RCUs are consumed.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Calculation involving Eventually Consistent Reads: ECR/2 \* ItemSize/4KB.
 * Calculation involving Strongly Consistent Read: SCR \* ItemSize/4KB
@@ -114,7 +114,7 @@ Note: You can switch between different modes once every 24 hours.
 * :warning: :warning: :warning: :warning: :warning: :warning: If you have 10 partitions, and you provide a new provision with 10 **WCUs** and 10 **RCUs**, then they're going to be spread evenly across partitions.
   * The even distribution of capacity ensures that the workload is spread across the partitions, preventing hotspots where certain partitions become overloaded with requests while others remain underutilized. DynamoDB's automatic partition management takes care of distributing the data and load balancing the requests to provide optimal performance and scalability.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Throttling
 
@@ -404,10 +404,10 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 #### DynamoDB Streams - Selective Data, Shards, and Stream Population
 
 * The information to be written to the stream can be selected:
-  * KEYS\_ONLY – Only the key attributes of the modified item are included.
-  * NEW\_IMAGE – The entire item, as it appears after modification, is included.
-  * OLD\_IMAGE – The entire item, as it appeared before modification, is included.
-  * NEW\_AND\_OLD\_IMAGES – Both the new and old images of the item are included.
+  * KEYS\_ONLY - Only the key attributes of the modified item are included.
+  * NEW\_IMAGE - The entire item, as it appears after modification, is included.
+  * OLD\_IMAGE - The entire item, as it appeared before modification, is included.
+  * NEW\_AND\_OLD\_IMAGES - Both the new and old images of the item are included.
 * DynamoDB Streams are composed of shards, similar to Kinesis Data Streams.
 * Shards are not provisioned by you; this process is automated by AWS.
 * After enabling a stream, records are not populated retroactively.
@@ -421,6 +421,80 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 * The Lambda function is invoked synchronously.
 
 <figure><img src="../../.gitbook/assets/image (157).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+### DynamoDB TTL
+
+
+
+• Items are automatically deleted after an expiry timestamp
+
+• No WCUs are consumed (i.e., no extra cost is incurred)
+
+• The TTL attribute is required to be a “Number” data type with a “Unix Epoch timestamp” value
+
+• Items expired are deleted within 48 hours of expiration
+
+• Expired items, which haven’t been deleted, are included in reads/queries/scans (filter them out if they are not wanted)
+
+• Expired items are removed from both LSIs and GSIs
+
+• A delete operation for each expired item is entered into the DynamoDB Streams (this can assist in recovering expired items)
+
+• Use cases include reducing stored data by retaining only current items and adhering to regulatory obligations
+
+
+
+### DynamoDB as Session State Cache
+
+* DynamoDB can be used for storing data as well as session state, acting as a cache for web applications. Web applications can retrieve or store session states as needed and share user logins across backend web applications.
+* DynamoDB and ElastiCache serve the same purpose of storing session states.
+  * ElastiCache is fully in memory, while DynamoDB is serverless and both are key/value stores.
+  * If the requirement is for an in-memory session state store, ElastiCache is likely the appropriate choice.
+  * If automatic scaling and other features are needed, DynamoDB is a suitable option.
+* Another way to store session states is on disk, which can be achieved using EFS (Elastic File System).
+  * EFS must be attached as a network drive to EC2 instances and can be an alternative to DynamoDB.
+* EBS volumes and EC2 instance stores are storage options but cannot be used for shared caching across multiple instances.
+* S3 can be used for session states, but it has higher latency and is more suitable for storing big files rather than small objects.
+* The recommended options for session state storage are DynamoDB, ElastiCache, and EFS, with DynamoDB and ElastiCache being preferable.
+* The choice depends on whether an in-memory solution or a more serverless approach with automatic scaling is desired.
+
+### DynamoDB Operations
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+* Copying a DynamoDB Table (Option 1):
+  * :warning::warning:\[Data Pipeline] The copying of a DynamoDB Table across accounts, regions, or places can be achieved through two options.
+    * AWS Data Pipeline is used as the first option.
+      * An Amazon EMR Cluster is launched by Data Pipeline in the backend.
+      * The DynamoDB Table is read by EMR using a scan operation and the data is written back into Amazon S3 for storage.
+      * In the second step, the data is read back from Amazon S3.
+      * The data is then inserted back into a **new DynamoDB Table**.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+### DynamoDB and S3
+
+* Two ways of using DynamoDB with Amazon S3 are discussed.
+* The first method involves storing large objects in DynamoDB.
+  * DynamoDB tables have a limit of 400 kilobytes for data storage, making it unsuitable for storing images and videos.
+  * Instead, an Amazon S3 bucket is used to store large objects.
+  * The process involves uploading an object to Amazon S3 and storing its metadata in DynamoDB.
+  * The metadata stored in DynamoDB includes the product ID, product name, and an image URL pointing to Amazon S3.
+  * This approach allows for small amounts of data to be stored in DynamoDB while the large objects are stored in Amazon S3.
+  * Clients retrieve the metadata from DynamoDB and fetch the corresponding objects from Amazon S3.
+  * This strategy can be scaled to handle multiple products.
+  *   The combination of Amazon S3 and DynamoDB leverages the strengths of each service.\
+      \
+
+
+      <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+* Another synergy between the two services is using DynamoDB to index S3 object metadata.
+  * Objects are uploaded to Amazon S3, and a Lambda function stores their metadata in a DynamoDB table.
+  * Querying the DynamoDB table is easier than querying an S3 bucket for building queries and retrieving specific information about the objects.
+  * Examples of queries include finding objects by a specific timestamp, calculating total storage used by a customer, listing objects based on attributes, or finding objects uploaded within a date range.
+  * The necessary objects are retrieved from the S3 bucket based on the results obtained from DynamoDB.
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ### References
 
