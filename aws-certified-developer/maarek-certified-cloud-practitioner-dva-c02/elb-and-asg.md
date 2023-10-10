@@ -279,7 +279,7 @@ Feature enabled by default in the ALB.
 
 #### Dynamic Scaling Policies
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Target Tracking Scaling:&#x20;
   * Most simple and easy to set-up.
@@ -303,7 +303,7 @@ Feature enabled by default in the ALB.
 
 * Predictive scaling: continuously forecast load and schedule scaling ahead.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
@@ -312,7 +312,7 @@ Feature enabled by default in the ALB.
 * CPUUtilization: Average CPU utilization across your instances.&#x20;
 * RequestCountPerTarget: to make sure the number of requests per EC2 instances is stable.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Average Network In / Out (if you’re application is network bound).
 * Any custom metric (that you push using CloudWatch).
@@ -322,7 +322,7 @@ Feature enabled by default in the ALB.
 * After a scaling activity happens, you are in the cooldown period ( :exclamation: default 300 seconds).
 * During the cooldown period, [**the ASG will not launch or terminate additional instances**](#user-content-fn-1)[^1] (to allow for metrics to stabilize).
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Auto Scaling - Instance Refresh
 

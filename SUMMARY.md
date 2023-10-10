@@ -43,6 +43,7 @@
   * [CloudWatch](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudwatch.md)
   * [CI/CD - CodeCoomit, CodePipeline, CodeBuild, CodeDeploy and CodeStar](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ci-cd-codecoomit-codepipeline-codebuild-codedeploy-and-codestar.md)
   * [DynamoDB](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/dynamodb.md)
+  * [Cognito](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cognito.md)
 
 ## AWS CLOUD PRACTITIONER
 

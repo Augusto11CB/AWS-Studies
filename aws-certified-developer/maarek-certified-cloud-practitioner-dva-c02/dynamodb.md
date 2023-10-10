@@ -31,7 +31,7 @@
 * Partition key must be unique for each item.
 * Partition key must be “diverse” so that the data is distributed.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Partition Key + Sort Key (HASH + RANGE)
 
@@ -39,7 +39,7 @@
 * Data is grouped by partition key.
 * Example: users-games table, “User\_ID” for Partition Key and “Game\_ID” for Sort Key.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Read/Write Capacity Modes
 
@@ -59,11 +59,11 @@ Note: You can switch between different modes once every 24 hours.
 
 **Console - Provisioned Mode With Auto Scaling Enabled**
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Console - Provisioned Mode With Auto Scaling Disabled**
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### On-Demand Mode
 
@@ -84,7 +84,7 @@ Note: You can switch between different modes once every 24 hours.
 * One Write Capacity Unit (WCU) represents one write per second for an item up to 1 KB in size.
 * If the items are larger than 1 KB, more WCUs are consumed.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB Strongly Consistent Read vs. Eventually Consistent Read.
 
@@ -100,7 +100,7 @@ Note: You can switch between different modes once every 24 hours.
 * One Read Capacity Unit (RCU) represents one Strongly Consistent Read (SCR) per second, or two Eventually Consistent Reads (ECR) per second, for an item up to 4 KB in size.
 * If the items are larger than 4 KB, more RCUs are consumed.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Calculation involving Eventually Consistent Reads: ECR/2 \* ItemSize/4KB.
 * Calculation involving Strongly Consistent Read: SCR \* ItemSize/4KB
@@ -114,7 +114,7 @@ Note: You can switch between different modes once every 24 hours.
 * :warning: :warning: :warning: :warning: :warning: :warning: If you have 10 partitions, and you provide a new provision with 10 **WCUs** and 10 **RCUs**, then they're going to be spread evenly across partitions.
   * The even distribution of capacity ensures that the workload is spread across the partitions, preventing hotspots where certain partitions become overloaded with requests while others remain underutilized. DynamoDB's automatic partition management takes care of distributing the data and load balancing the requests to provide optimal performance and scalability.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Throttling
 
@@ -452,7 +452,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 
 ### DynamoDB Operations
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Copying a DynamoDB Table (Option 1):
   * :warning::warning:\[Data Pipeline] The copying of a DynamoDB Table across accounts, regions, or places can be achieved through two options.
@@ -462,7 +462,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
       * In the second step, the data is read back from Amazon S3.
       * The data is then inserted back into a **new DynamoDB Table**.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB and S3
 
@@ -479,14 +479,14 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
       \
 
 
-      <figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 * Another synergy between the two services is using DynamoDB to index S3 object metadata.
   * Objects are uploaded to Amazon S3, and a Lambda function stores their metadata in a DynamoDB table.
   * Querying the DynamoDB table is easier than querying an S3 bucket for building queries and retrieving specific information about the objects.
   * Examples of queries include finding objects by a specific timestamp, calculating total storage used by a customer, listing objects based on attributes, or finding objects uploaded within a date range.
   * The necessary objects are retrieved from the S3 bucket based on the results obtained from DynamoDB.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Security & Other Features
 
@@ -510,14 +510,14 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 
 ### DynamoDB - Users Interact with DynamoDB Directly
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Using Web Identity Federation or Cognito Identity Pools, each user gets AWS credentials.
 * You can assign an IAM Role to these users with a Condition to limit their API access to DynamoDB.
 * LeadingKeys: limit row-level access for users on the Primary Key.
 * Attributes: limit specific attributes the user can see.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### References
 
