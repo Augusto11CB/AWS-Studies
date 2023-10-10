@@ -80,7 +80,7 @@ Parameters:
     ParameterProperty: value
 ```
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ```yaml
 Parameters:
@@ -120,7 +120,7 @@ Pseudo parameters are parameters that are predefined by AWS CloudFormation. You 
 
 
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
 
 ### CloudFormation - Mappings
 
@@ -400,7 +400,7 @@ Outputs:
 
 ### CloudFormation - Stack Notifications
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### References
 

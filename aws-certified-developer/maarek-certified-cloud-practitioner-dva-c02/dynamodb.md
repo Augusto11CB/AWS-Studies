@@ -39,7 +39,7 @@
 * Data is grouped by partition key.
 * Example: users-games table, “User\_ID” for Partition Key and “Game\_ID” for Sort Key.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Read/Write Capacity Modes
 
@@ -63,7 +63,7 @@ Note: You can switch between different modes once every 24 hours.
 
 **Console - Provisioned Mode With Auto Scaling Disabled**
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### On-Demand Mode
 
@@ -100,7 +100,7 @@ Note: You can switch between different modes once every 24 hours.
 * One Read Capacity Unit (RCU) represents one Strongly Consistent Read (SCR) per second, or two Eventually Consistent Reads (ECR) per second, for an item up to 4 KB in size.
 * If the items are larger than 4 KB, more RCUs are consumed.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Calculation involving Eventually Consistent Reads: ECR/2 \* ItemSize/4KB.
 * Calculation involving Strongly Consistent Read: SCR \* ItemSize/4KB
@@ -114,7 +114,7 @@ Note: You can switch between different modes once every 24 hours.
 * :warning: :warning: :warning: :warning: :warning: :warning: If you have 10 partitions, and you provide a new provision with 10 **WCUs** and 10 **RCUs**, then they're going to be spread evenly across partitions.
   * The even distribution of capacity ensures that the workload is spread across the partitions, preventing hotspots where certain partitions become overloaded with requests while others remain underutilized. DynamoDB's automatic partition management takes care of distributing the data and load balancing the requests to provide optimal performance and scalability.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Throttling
 
@@ -198,7 +198,7 @@ Note: You can switch between different modes once every 24 hours.
   * Return items from one or more tables.
   * Up to 100 items, up to 16 MB of data.
   * Items are retrieved in parallel to minimize latency.
-  * UnprocessedKeys for failed read operations (exponential backoff or add RCU).]
+  * UnprocessedKeys for failed read operations (exponential backoff or add RCU).
 
 ### DynamoDB - PartiQL
 
@@ -213,12 +213,10 @@ PartiQL is a SQL-compatible query language for DynamoDB that allows one to perfo
   * attribute\_type
   * contains (for string)
   * begins\_with (for string)
-  * ProductCategory IN (:cat1, :cat2) and Price between :low and :high
+  * `ProductCategory IN (:cat1, :cat2) and Price between :low and :high`
   * size (string length)
 
 :warning:Note: **Filter Expression** filters the results of **read queries**, while **Condition Expressions** are for **write operations.**
-
-
 
 **Example: Update Item**
 
@@ -253,7 +251,7 @@ PartiQL is a SQL-compatible query language for DynamoDB that allows one to perfo
   *
 
       <figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption><p>Font: Be a Better Dev, 2019b</p></figcaption></figure>
-  * Give me all the rows where: `OriginCountry == "Germany"`
+  * Give me all the rows where: `OriginCountry == "Germany"`.
   * **Not Ideal Approach:**
     * Scan + FilterExpression("OriginCountry == "Germany").
     * This approach is going to check each one of the rows in this DynamoDB table and it will verify if the if OriginCountry == "Germany".
@@ -284,8 +282,6 @@ DynamoDBQueryExpression<Account> q = new DynamoDBQueryExpression<Account>()
 
 <figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-
-
 <figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (139).png" alt=""><figcaption><p>Font: Be a Better Dev, 2019b</p></figcaption></figure>
@@ -299,7 +295,7 @@ DynamoDBQueryExpression<Account> q = new DynamoDBQueryExpression<Account>()
 * Writes to the main table result in a write to the GSI, effectively doubling the cost of writing.
 * Writes to the main table are eventually replicated on the GSI (usually very quickly, but no guaranteed SLA).
 * Race conditions due to eventual consistency - your GSI can potentially return stale data.
-* Keep your WCU capacoty on your GSI tables >= the WCU capacity on your main table
+* Keep your WCU capacoty on your GSI tables >= the WCU capacity on your main table.
 
 ### DynamoDB - Local Secondary Index (LSI)
 
@@ -342,7 +338,7 @@ Here's how it works:
 * It addresses the “Hot Key” problem, which occurs when there are too many reads.
   * :warning::warning::warning:**The hot key problems are addressed by DAX. Throttling on your RCU's may occur if a very specific key or item is read too many times. However, this problem is mitigated if the item is cached by DAX.**
 * The Time to Live (TTL) for cache is 5 minutes by default.
-  * Custom TTL -> Parameter Group
+  * Custom TTL -> Parameter Group.
   *
 
       <figure><img src="../../.gitbook/assets/image (153).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
@@ -376,16 +372,16 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 
 * An ordered stream of item-level modifications (create/update/delete) in a table is provided.
 * Stream records have the capability to be:
-  * Dispatched to Kinesis Data Streams
-  * Accessed by AWS Lambda
-  * Read by Kinesis Client Library applications
+  * Dispatched to Kinesis Data Streams.
+  * Accessed by AWS Lambda.
+  * Read by Kinesis Client Library applications.
 * Data can be retained for a duration of up to 24 hours.
 * The use cases encompass:
-  * Real-time reactions to changes (such as sending a welcome email to users)
-  * Analytics
-  * Insertion into derivative tables
-  * Insertion into OpenSearch Service
-  * Implementation of cross-region replication
+  * Real-time reactions to changes (such as sending a welcome email to users).
+  * Analytics.
+  * Insertion into derivative tables.
+  * Insertion into OpenSearch Service.
+  * Implementation of cross-region replication.
 
 #### Example - Architecture Diagram
 
@@ -424,25 +420,21 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 
 ### DynamoDB TTL
 
+• Items are automatically deleted after an expiry timestamp.
 
+• No WCUs are consumed (i.e., no extra cost is incurred).
 
-• Items are automatically deleted after an expiry timestamp
+• The TTL attribute is required to be a “Number” data type with a “Unix Epoch timestamp” value.
 
-• No WCUs are consumed (i.e., no extra cost is incurred)
+• Items expired are deleted within 48 hours of expiration.
 
-• The TTL attribute is required to be a “Number” data type with a “Unix Epoch timestamp” value
+• Expired items, which haven’t been deleted, are included in reads/queries/scans (filter them out if they are not wanted).
 
-• Items expired are deleted within 48 hours of expiration
+• Expired items are removed from both LSIs and GSIs.
 
-• Expired items, which haven’t been deleted, are included in reads/queries/scans (filter them out if they are not wanted)
+• A delete operation for each expired item is entered into the DynamoDB Streams (this can assist in recovering expired items).
 
-• Expired items are removed from both LSIs and GSIs
-
-• A delete operation for each expired item is entered into the DynamoDB Streams (this can assist in recovering expired items)
-
-• Use cases include reducing stored data by retaining only current items and adhering to regulatory obligations
-
-
+• Use cases include reducing stored data by retaining only current items and adhering to regulatory obligations.
 
 ### DynamoDB as Session State Cache
 
@@ -460,7 +452,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 
 ### DynamoDB Operations
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Copying a DynamoDB Table (Option 1):
   * :warning::warning:\[Data Pipeline] The copying of a DynamoDB Table across accounts, regions, or places can be achieved through two options.
@@ -470,7 +462,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
       * In the second step, the data is read back from Amazon S3.
       * The data is then inserted back into a **new DynamoDB Table**.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB and S3
 
@@ -487,14 +479,45 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
       \
 
 
-      <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 * Another synergy between the two services is using DynamoDB to index S3 object metadata.
   * Objects are uploaded to Amazon S3, and a Lambda function stores their metadata in a DynamoDB table.
   * Querying the DynamoDB table is easier than querying an S3 bucket for building queries and retrieving specific information about the objects.
   * Examples of queries include finding objects by a specific timestamp, calculating total storage used by a customer, listing objects based on attributes, or finding objects uploaded within a date range.
   * The necessary objects are retrieved from the S3 bucket based on the results obtained from DynamoDB.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+### DynamoDB - Security & Other Features
+
+**Security**
+
+* VPC Endpoints available to access DynamoDB without using the Internet.
+* Access fully controlled by IAM.
+* Encryption at rest using AWS KMS and in-transit using SSL/TLS.
+
+**Backup and Restore feature available**
+
+* Point in time recovery (PITR) like RDS&#x20;
+
+**Global tables**
+
+* Multi-region, multi-active, fully replicated, high performance
+
+**DynamoDB Local**
+
+* Develop and test apps locally without accessing the DynamoDB web service (without Internet)
+
+### DynamoDB - Users Interact with DynamoDB Directly
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+
+* Using Web Identity Federation or Cognito Identity Pools, each user gets AWS credentials.
+* You can assign an IAM Role to these users with a Condition to limit their API access to DynamoDB.
+* LeadingKeys: limit row-level access for users on the Primary Key.
+* Attributes: limit specific attributes the user can see.
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### References
 
