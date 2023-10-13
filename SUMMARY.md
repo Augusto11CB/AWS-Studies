@@ -57,6 +57,7 @@
   * [AWS Nitro Enclaves](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-nitro-enclaves.md)
   * [Other AWS Services](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/other-aws-services.md)
   * [Serverless Application Model (SAM)](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/serverless-application-model-sam.md)
+  * [API Gateway](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/api-gateway.md)
 
 ## AWS CLOUD PRACTITIONER
 

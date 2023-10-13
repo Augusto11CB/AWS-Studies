@@ -119,7 +119,7 @@ We can install an additional CLI called the “EB cli” which makes working wit
 
 
 
-### TODO
+### TODO Hands-on
 
 * 2x Elastic Beanstalk application:
   * One Web Elastic Beanstalk Application.
