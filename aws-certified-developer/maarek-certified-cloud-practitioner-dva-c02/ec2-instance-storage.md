@@ -20,7 +20,7 @@
 
 #### EBS - Delete on Termination Attribuite
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Controls the EBS behaviour when an EC2 instance terminates:
   * By default, the root EBS volume is deleted (attribute enabled).
@@ -66,7 +66,7 @@
 
 #### EBS - Volume Types Summary
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Provisioned IOPS (PIOPS) SSD (io1/io2)
 
@@ -89,7 +89,7 @@
 * Not Necessary to detach volume to do snapshot, but recommended.
 * Can Copy snapshots across AZ or Region.
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt="" width="557"><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="557"><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### EBS Snapshots Features
 
@@ -140,7 +140,7 @@
 * EFS works with EC2 instances in multi-AZ.
 * Highly available, scalable, expensive (3x gp2), **pay per use**.
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **Use cases:**
   * content management.
@@ -178,7 +178,7 @@
 
 
 
-    <figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 
 * Availability and durability

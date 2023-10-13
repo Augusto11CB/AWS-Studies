@@ -39,7 +39,7 @@
 
 #### Cognito Authentication
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 * `GET /api/data` will be performed by users.
 * The ALB will be set up with HTTPS with the action authenticate-cognito.
@@ -50,7 +50,7 @@
 
 #### OIDC User Authentication
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 * (1) The client will make a HTTP request.
 * (2) The user will be redirected by the ALB for authentication to the **authentication endpoint** of the **identity provider**.

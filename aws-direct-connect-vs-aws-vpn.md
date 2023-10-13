@@ -31,7 +31,7 @@ AWS Direct Connect and VPN are two different connectivity options for businesses
 * Update the security group rules.
 * Create an AWS Managed VPN Connection.
 
-<figure><img src=".gitbook/assets/image (11) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>SHANNON, 2023</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (11) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>SHANNON, 2023</p></figcaption></figure>
 
 
 

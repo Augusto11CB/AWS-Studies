@@ -115,7 +115,7 @@ We can install an additional CLI called the “EB cli” which makes working wit
 * Terminate the old environment (RDS won’t be deleted).
 * Delete CloudFormation stack (in DELETE\_FAILED state).
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

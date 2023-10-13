@@ -43,9 +43,20 @@
   * [CloudWatch](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudwatch.md)
   * [CI/CD - CodeCoomit, CodePipeline, CodeBuild, CodeDeploy and CodeStar](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ci-cd-codecoomit-codepipeline-codebuild-codedeploy-and-codestar.md)
   * [DynamoDB](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/dynamodb.md)
-  * [Cognito](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cognito/README.md)
+  * [Cognito](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cognito.md)
     * [Cognito User Pools](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cognito/cognito-user-pools.md)
     * [Cognito Identity Pools](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cognito/cognito-identity-pools.md)
+  * [Step Functions](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/step-functions.md)
+  * [AppSync](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/appsync.md)
+  * [Amplify](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/amplify.md)
+  * [Advanced Identity](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/advanced-identity.md)
+  * [Key Management Service](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/key-management-service.md)
+  * [CloudHSM](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/cloudhsm.md)
+  * [SSM Parameter Store](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ssm-parameter-store.md)
+  * [Secrets Manager](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/secrets-manager.md)
+  * [AWS Nitro Enclaves](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-nitro-enclaves.md)
+  * [Other AWS Services](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/other-aws-services.md)
+  * [Serverless Application Model (SAM)](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/serverless-application-model-sam.md)
 
 ## AWS CLOUD PRACTITIONER
 

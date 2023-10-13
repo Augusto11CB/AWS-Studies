@@ -331,7 +331,7 @@ Storage Gateway supports four key hybrid cloud use cases: move backups and archi
 
 #### Database Comparisons
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html">AWS's Page</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html">AWS's Page</a></p></figcaption></figure>
 
 #### AuroraDB
 

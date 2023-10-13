@@ -12,7 +12,7 @@
 
 ### Example of Architecture Using CodeXYZ Services
 
-<figure><img src=".gitbook/assets/image (12) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://aws.amazon.com/blogs/devops/complete-ci-cd-with-aws-codecommit-aws-codebuild-aws-codedeploy-and-aws-codepipeline/">AWS Doc</a>, 2023</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (12) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://aws.amazon.com/blogs/devops/complete-ci-cd-with-aws-codecommit-aws-codebuild-aws-codedeploy-and-aws-codepipeline/">AWS Doc</a>, 2023</p></figcaption></figure>
 
 In summary, the solution has the following workflow:
 

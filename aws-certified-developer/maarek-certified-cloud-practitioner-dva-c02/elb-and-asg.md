@@ -42,17 +42,17 @@
 
 #### Load Balancer Security Groups
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Load Balancer's Security Group:**
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Users can access load balancer from anywhere using HTTP or HTTPS.
 
 **Application's Security Group:**
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Allow traffic only from Load Balancer.
 * The source of it is the Load Balancer's Security Group (sg-054b5ff5ea02f2b6e)
@@ -103,7 +103,7 @@
 * Application Load Balancer.
 * Health Checks support the TCP, HTTP and HTTPS Protocols.
 
-<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Gateway Load Balancer
 
@@ -115,7 +115,7 @@
     * deep packet inspection system.
     * **payload manipulation**.
 
-<figure><img src="../../.gitbook/assets/image (11) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * &#x20;Uses the **GENEVE** protocol on port 6081
 * Operates at Layer 3 (Network Layer) – IP Packets.
@@ -128,7 +128,7 @@
 * EC2 Instances.
 * IP Addresses (must be private IPs).
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### ELB Sticky Sessions (Session Affinity)
 
@@ -138,7 +138,7 @@
 * Use case: make sure the user doesn’t lose his session data.
 * :warning:Enabling stickiness may bring **imbalance** to the load over the backend EC2 instances.
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Cookie Names
 
@@ -165,7 +165,7 @@ There are two kind of cookies in this within the application-basesd cookies (cus
 
 
 
-<figure><img src="../../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Cross-Zone Load Balancing
 
@@ -173,7 +173,7 @@ Cross-Zone Load Balancing is an option for load balancers on AWS that allows the
 
 This means that if one Availability Zone has more traffic than another, the load balancer can balance the load by sending some requests to the targets in the less busy Availability Zone (AWS, 2023a).
 
-<figure><img src="../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * ALB&#x20;
   * :bangbang:Enabled by default (can be disabled at the Target Group level).
@@ -186,7 +186,7 @@ This means that if one Availability Zone has more traffic than another, the load
 
 Feature enabled by default in the ALB.
 
-<figure><img src="../../.gitbook/assets/image (18) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **In order to turn this feature off:**
 
@@ -217,7 +217,7 @@ Feature enabled by default in the ALB.
 
 
 
-      <figure><img src="../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Connection Draining (Deregistration Delay)
 
@@ -229,7 +229,7 @@ Feature enabled by default in the ALB.
 * Between 1 to 3600 seconds (default: 300 seconds).
 * Can be disablet (set value to 0).
 
-<figure><img src="../../.gitbook/assets/image (16) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Auto Scaling Group (ASG)
 
