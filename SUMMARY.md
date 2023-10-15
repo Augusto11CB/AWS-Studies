@@ -58,6 +58,7 @@
   * [Other AWS Services](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/other-aws-services.md)
   * [Serverless Application Model (SAM)](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/serverless-application-model-sam.md)
   * [API Gateway](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/api-gateway.md)
+  * [AWS Cloud Development Kit (CDK)](aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-cloud-development-kit-cdk.md)
 
 ## AWS CLOUD PRACTITIONER
 
