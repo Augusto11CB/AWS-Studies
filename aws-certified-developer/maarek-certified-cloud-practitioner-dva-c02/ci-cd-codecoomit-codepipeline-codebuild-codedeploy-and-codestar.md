@@ -7,7 +7,7 @@
 
 <figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://www.youtube.com/@TinyTechnicalTutorials">Tiny Technical Tutorials</a>, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CodeCommit
 
@@ -26,7 +26,7 @@
   * :warning: Repositories are automatically encrypted at rest using AWS KMS.
   * Encrypted in transit (can only use HTTPS or SSH – both secure).
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CodePipeline
 
@@ -41,17 +41,17 @@
 
 
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 * :point\_up:A stage can have multiple Action Groups.
 * In the image abova the stage DeployToProd has to action groups:
@@ -60,13 +60,13 @@
 
 #### Events vs. Webhooks vs. Polling
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Manual Approval Stage (Exam Question)
 
 * IAM User must have permission to access the pipeline and approve the stage/step.
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CodeBuild
 
@@ -92,11 +92,11 @@
 * Use CloudWatch Alarms to notify if you need "thresholds" for failures.
 * Build projects can be defined with CodePipeline or Code Build
 
-<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * CodeBuild will run every thing inside a docker container. It will use the image specified in the `run-as: Linux-user-name` (2) in the file `buildspec.yml`  or a default image choose by AWS (1).
 
-![](<../../.gitbook/assets/image (13) (1).png>)
+<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 #### The file buildspec.yml
 
@@ -253,23 +253,23 @@ artifacts:
 
 
 
-<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 #### CodeBuild - Local Build
 
@@ -293,7 +293,7 @@ artifacts:
   * CREATE\_UPDATE – create or update an existing stack
   * DELETE\_ONLY – delete a stack if it exists
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * (1) CloudFormation deploy/creates an infra & app in a test environment.
 * (2) CloudBuild test this newly created environment
@@ -354,7 +354,7 @@ hooks:
 * It can be installed and updated automatically if you’re using Systems Manager.
 * :warning: The EC2 Instances must have sufficient permissions to access Amazon S3 to get deployment bundles.
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CodeDeploy - Lambda Platform
 
@@ -369,7 +369,7 @@ hooks:
   * LambdaCanary10Percent30Minutes.
 * AllAtOnce: Immediate.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CodeDeploy - ECS Platform
 
@@ -382,7 +382,7 @@ hooks:
   * LambdaCanary10Percent30Minutes.
 * AllAtOnce: Immediate.
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CodeDeploy - Deployment to EC2
 
@@ -400,7 +400,7 @@ hooks:
   * Choose how long to keep the old EC2 instances (old ASG).
   * :warning: Must be using an ELB.
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CodeDeploy - Redeploy & Rollbacks
 
@@ -415,27 +415,25 @@ hooks:
 
 * Creating a CodeDeploy Application called DemoApplication:
 
-<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 * Code Deploy Deployment Group for DemoApplication:
 
-<figure><img src="../../.gitbook/assets/image (129).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (129).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (130).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (130).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (131).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (131).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (133).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (133).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (134).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 ### References
 
 Tine Technical Tutorials. _Basics of CodeStar, Code Pipeline, CodeBuild, Cloud9, CodeCommit, CodeDeploy - AWS for Beginners_. \[Videoaula]. YouTube, 2023. Disponível em: <[https://www.youtube.com/watch?v=iGCJ-N7bPX0](https://www.youtube.com/watch?v=iGCJ-N7bPX0)>. Acesso em: 01 oct. 2023.
-
-
 
 AWS. _What is the AWS Serverless Application Model (AWS SAM)?_. Amazon Web Services. Disponível em: <[https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)>. Acesso em: 01 oct. 2023a.
 

@@ -27,8 +27,8 @@ In summary, AWS Secrets Manager provides robust capabilities for managing secret
 * Also integrates with AWS CloudFormation, allowing you to manage your parameters alongside your infrastructure.
 * Can retrieve secrets stored in Secrets Manager using the SSM Parameter Store API, providing a bridge between the two services.
 
-In summary, both services offer secure storage for sensitive information. Secrets Manager provides more advanced features like automatic secret rotation, while SSM Parameter Store is a simpler and more cost-effective option. The choice between the two depends on your specific needs and budget.
+Both services offer secure storage for sensitive information. Secrets Manager provides more advanced features like automatic secret rotation, while SSM Parameter Store is a simpler and more cost-effective option. The choice between the two depends on your specific needs and budget.
 
 
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>

@@ -11,8 +11,6 @@
 
 ### Envelop Encryption
 
-Sure, here’s an enhanced explanation:
-
 **Envelope Encryption**
 
 * The `KMS Encrypt` API call in AWS Key Management Service (KMS) has a data limit of 4 KB. This means it can only encrypt data that is 4 KB or less in size.
@@ -38,13 +36,11 @@ To perform envelope encryption using AWS KMS, there are specific API calls that 
 
 When it comes to decrypting data that has been encrypted with envelope encryption, the statement mentions using the "decrypt" API. The decrypt API call is used to decrypt the encrypted DEK using the appropriate key encryption key, allowing access to the plaintext DEK. Once the DEK is decrypted, it can be used to decrypt the actual data.
 
-In summary, to perform envelope encryption with AWS KMS, you need to use the "GenerateDataKey" API to generate a data encryption key (DEK), and if you need access to the plaintext DEK, use the "GenerateDataKey" API. To decrypt the data, use the "decrypt" API to decrypt the encrypted DEK, which will give you access to the plaintext DEK for decrypting the actual data.
+In order to perform envelope encryption with AWS KMS, you need to use the "GenerateDataKey" API to generate a data encryption key (DEK), and if you need access to the plaintext DEK, use the "GenerateDataKey" API. To decrypt the data, use the "decrypt" API to decrypt the encrypted DEK, which will give you access to the plaintext DEK for decrypting the actual data.
 
 </details>
 
 ### KMS Request Quotas
-
-Sure, here’s an enhanced explanation:
 
 * **AWS Key Management Service (KMS) Quotas**: AWS KMS has a unique feature where each cryptographic operation, including encryption and decryption, shares a quota. This quota is the limit on the number of cryptographic operations that can be performed.
 * **Shared Quota**: Any service that makes a request on your behalf, such as AWS S3 using SSE-KMS data encryption, contributes to this quota. This means the quota is shared across your account for each region and across all cryptographic operations.
@@ -53,6 +49,4 @@ Sure, here’s an enhanced explanation:
   * **Data Encryption Key (DEK) Caching**: If you’re using the `GenerateDataKey` API, you can cache the data encryption key locally. This reduces the number of API calls made to AWS, thereby reducing the usage of your quota. This is a feature of the encryption SDK itself.
   * **Request Quota Increase**: If you’re consistently exceeding your limit, you can request a quota increase. This can be done through an API call or by opening a support ticket with AWS. This will allow for more cryptographic operations to be performed.
 
-In summary, understanding and managing your AWS KMS quotas is crucial for maintaining efficient and uninterrupted operations in your AWS environment.
-
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>

@@ -2,13 +2,11 @@
 
 ### SES
 
-
+**TODO**
 
 ### Amazon OpenSearch Service
 
 It is the successor to Amazon ElasticSearch.
-
-Sure, here’s a more concise and structured explanation of AWS OpenSearch:
 
 AWS OpenSearch, formerly known as Amazon ElasticSearch, underwent a name change due to licensing issues. It’s a powerful tool that complements other databases by providing advanced search capabilities.
 
@@ -32,10 +30,6 @@ OpenSearch uses its own query language and doesn’t natively support SQL. Howev
 1. **DynamoDB with OpenSearch:** DynamoDB holds your data where users insert, delete, and update data. The streams in DynamoDB Stream are picked up by a Lambda Function which inserts the data into Amazon OpenSearch in real time. This allows your application to search for specific items and retrieve full items from your DynamoDB Table.
 2. **CloudWatch Logs with OpenSearch:** You can use a CloudWatch Log Subscription Filter to send data in real time to a Lambda Function managed by AWS which sends all the data into Amazon OpenSearch.
 3. **Kinesis with OpenSearch:** Kinesis Data Streams can be sent into Amazon OpenSearch using either Kinesis Data Firehose for near real-time service or a Lambda Function for real-time service.
-
-These patterns provide a comprehensive overview of the possible architectures for using Amazon OpenSearch.
-
-
 
 ### Amazon Athena
 
@@ -95,7 +89,7 @@ The key points about the Federated Query feature in Amazon Athena:
 
 #### Amazon MSK Consumers
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **Kinesis Data Analytics for Apache Flink:** You can use a Flink Application to read directly from the MSK cluster.
 * **Glue for Streaming ETL Jobs:** Glue can be used to perform streaming ETL jobs, which are powered by Apache Spark Streaming.
@@ -107,7 +101,7 @@ The key points about the Federated Query feature in Amazon Athena:
 * Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS.
 * Macie helps identify and alert you to sensitive data, such as personally identifiable information (PII)
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### AWS AppConfig
 
@@ -121,11 +115,11 @@ The key points about the Federated Query feature in Amazon Athena:
   * JSON Schema for syntactic checks, or
   * Lambda Function to run code for semantic checks. This ensures that your configurations are both syntactically and semantically correct before they are deployed. This should provide a comprehensive understanding of AWS AppConfig.
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudWatch Evidently
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **Feature Validation:** CloudWatch Evidently allows you to safely validate new features by serving them to a specified percentage of your users.
 * **Risk Reduction:** It helps reduce risk and identify unintended consequences of new features.

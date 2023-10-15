@@ -10,7 +10,7 @@ Font: AWS, 2023a
 
 [https://repost.aws/knowledge-center/ecs-task-fargate-splunk-log-driver](https://repost.aws/knowledge-center/ecs-task-fargate-splunk-log-driver)
 
-<figure><img src="../../.gitbook/assets/image (123).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (123).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 ### References
 

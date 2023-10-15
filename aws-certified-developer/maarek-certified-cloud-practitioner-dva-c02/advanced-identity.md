@@ -13,7 +13,7 @@
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 #### STS - Assume a Role
 
@@ -22,7 +22,7 @@
 * **Using AWS STS**: The AWS Security Token Service (STS) should be used to retrieve temporary security credentials. These credentials allow you to impersonate the IAM Role that you have access to, using the `AssumeRole` API operation.
 * **Temporary Credentials**: The credentials provided by STS are temporary and can be valid for a duration ranging from 15 minutes up to 1 hour. This reduces the risk associated with long-term credentials, enhancing the security of your AWS environment.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### STS - with MFA
 
@@ -37,7 +37,7 @@
 
 By using these elements, you can enhance the security of your AWS operations with MFA. It’s a powerful way to protect your resources and data.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p> Font: DAVIS, 2022</p></figcaption></figure>
 
 ### The `iam:PassRole`
 
@@ -73,19 +73,29 @@ In summary, the "PassRole" permission is a safeguard that ensures only authorize
 
 ### IAM - Advanced Topics
 
-IAM Best Practices - General
+#### IAM Best Practices - General
 
-IAM Best Practices - IAM Roles
+* TODO
 
-IAM Best Practices - Cross Account Access
+#### IAM Best Practices - IAM Roles
 
-Authorization Model Evaluation of Policies
+* TODO
 
-Dynamic Policies with IAM
+#### IAM Best Practices - Cross Account Access
 
-Inline vs Managed Policies
+* TODO
 
+#### Authorization Model Evaluation of Policies
 
+* TODO
+
+#### Dynamic Policies with IAM
+
+* TODO
+
+#### Inline vs Managed Policies
+
+* TODO
 
 ### Directory Services
 
@@ -93,4 +103,9 @@ Inline vs Managed Policies
 * AD Connector
 * Simple AD
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+
+### References
+
+DAVIS, Neal. _How to Use MFA with the AWS CLI_. \[Videoaula]. YouTube, 2022. Disponível em: [https://www.youtube.com/watch?v=BNpbGHhk5Tc](https://www.youtube.com/watch?v=BNpbGHhk5Tc). Acesso em: 11 out. 2023.
+

@@ -22,5 +22,3 @@
 * You then use the Nitro CLI to convert your application into an Enclave Image File (EIF), which you use as an input to create an Enclave on your EC2 instance.
 * The Enclave shares the VP, memory, CPU, and kernel with the host but is highly isolated within it.
 * The EC2 instance has separation from your Enclave and can only communicate over a secure local channel. There is also separation from any other instance running on the same host.
-
-In summary, AWS Nitro Enclaves provide a high level of security on EC2 for processing sensitive data. They offer a simple yet powerful solution for creating highly isolated compute environments within AWS.

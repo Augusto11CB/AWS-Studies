@@ -1,9 +1,5 @@
 # API Gateway
 
-### Console Prints Config
-
-
-
 ### When should I use the API Gateway integration type "Lambda Function Integration" and when should I use the API Gateway integration type "Lambda Function Integration as Lambda Proxy Integration"?
 
 In Amazon API Gateway, you can use two types of integrations with Lambda functions: "Lambda Function Integration" and "Lambda Proxy Integration." Here's an explanation of when to use each type:
@@ -27,6 +23,6 @@ In summary, use "Lambda Function Integration" when you need more control over th
 
 * Create a lambda authorizer to control access to API Gateway's endpoints.
 
-<figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption><p>Font: MAAREK, 2023Co</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
