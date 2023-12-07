@@ -23,6 +23,6 @@ In summary, use "Lambda Function Integration" when you need more control over th
 
 * Create a lambda authorizer to control access to API Gateway's endpoints.
 
-<figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption><p>Font: MAAREK, 2023Co</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>

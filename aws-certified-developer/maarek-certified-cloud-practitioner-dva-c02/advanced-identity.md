@@ -11,7 +11,7 @@
 * :warning::warning::warning:**GetCallerIdentity**: This operation returns details about the IAM user or role that is used in the API call. It’s a helpful way to audit and track API usage.
 * **DecodeAuthorizationMessage**: This operation decodes the error message when an AWS API call is denied. It’s useful for troubleshooting and understanding permission issues.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 

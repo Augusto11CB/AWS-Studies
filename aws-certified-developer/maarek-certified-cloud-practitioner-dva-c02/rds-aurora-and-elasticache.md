@@ -306,7 +306,7 @@ Cache Evictions, Scale up or out your elasticCache redis Cluster
 * The main difference between Redis and MemoryDB for Redis, is that while Redis is intent to be used as a cache DB with some durability, **MemoryDB is really a database** that has a Redis compatible API**.**
 * **It is in-memory DB, but it's durable data storage with Multi-AZ transaction log.**
   * "Multi-AZ transaction log" refers to the mechanism MemoryDB uses to replicate changes made to the data across these Availability Zones. The transaction log records and replicates all data modifications, ensuring data consistency and minimizing the risk of data loss in the event of an AZ failure.
-  * See more about what is transaction logs in this note: [Database Concepts](http://127.0.0.1:5000/s/uBtdKjBB6wlw1AXXdtRP/database-concepts "mention")
+  * See more about what is transaction logs in this note: [Database Concepts](https://app.gitbook.com/s/uBtdKjBB6wlw1AXXdtRP/database-concepts "mention")
 
 While Amazon ElastiCache for Redis is a managed version of Redis, an in-memory data store used mainly for caching,Amazon MemoryDB for Redis aims to replace both cache and database in one component.&#x20;
 

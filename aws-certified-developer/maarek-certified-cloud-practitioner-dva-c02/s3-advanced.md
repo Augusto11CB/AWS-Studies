@@ -196,7 +196,7 @@ Amazon S3 Transfer Acceleration works as described below (AWS, 2023b):
   * Key-value pairs for objects in Amazon S3.
   * Useful for fine-grained permissions (only access specific objects with specific tags).
   * :warning:Useful for **analytics** **purposes** (using S3 Analytics to group by tags).
-* You **cannot search the object** metadata or object tags. Instead, you must use an external DB as a search index such as DynamoDB
+* You **cannot search the object** metadata or object tags. Instead, you must use an external DB as a search index such as DynamoDB.
 
 
 
